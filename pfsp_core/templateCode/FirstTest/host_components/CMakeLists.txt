@@ -1,0 +1,2 @@
+add_subdirectory(FirstComponent)
+add_subdirectory(SecondComponent)

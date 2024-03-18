@@ -1,0 +1,22 @@
+{
+    "SmartConverter - Internal To External Output": {
+        "function": "getConvertedExternalData",
+        "smart_converter_component_id": 1,
+        "includes": [
+            "pfsp_core_smart_converter_ext.hpp"
+        ],
+        "class_initial": "CService2",
+        "data_map": {
+            "ExternalOutputFromCService2": [
+                {
+                    "dst_var_name": "type_varname",
+                    "dtype": "int8_t",
+                    "from": "CService2InteralData",
+                    "assigne": "type_varname",
+                    "stype": "int8_t",
+                    "scomponent_id": 1
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,1223 @@
+{
+    "id": 139728441726384,
+    "scene_width": 64000,
+    "scene_height": 64000,
+    "nodes": [
+        {
+            "id": 139728441849840,
+            "title": "HostComponent",
+            "pos_x": -560.0,
+            "pos_y": -137.0,
+            "inputs": [],
+            "outputs": [],
+            "content": {
+                "name": "ServiceComponent1",
+                "id": "1",
+                "priority": "10",
+                "class": "CService1",
+                "config file": "config1",
+                "hidden": {
+                    "parameters": [
+                        {
+                            "name": "HostComponentLibName",
+                            "value": "libPFSP_ServiceName1.so"
+                        }
+                    ],
+                    "mode_manager": {
+                        "PlayType": "Repeat",
+                        "ThreadFrequency": 20,
+                        "eSWComponentOperationModeDegradation": false,
+                        "eSWComponentOperationModeDiagnostics": false,
+                        "eSWComponentOperationModeNormal": true
+                    },
+                    "smart_converter": {
+                        "id": 139728632718928,
+                        "scene_width": 64000,
+                        "scene_height": 64000,
+                        "nodes": [
+                            {
+                                "id": 139728632720112,
+                                "title": "Data Structure",
+                                "pos_x": 507.0,
+                                "pos_y": -299.12500000000006,
+                                "inputs": [
+                                    {
+                                        "id": 139728632720176,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139935739062736,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139936253821904,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139728632719856,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139936253822144,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139936253821568,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "CService1InteralData1",
+                                    "object_member_0": "expect_1:int32_t",
+                                    "object_member_1": "expect_10:int32_t",
+                                    "object_member_2": "expect_100:uint32_t"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 139728632720016,
+                                "title": "SmartConverter - Internal To External Output",
+                                "pos_x": 870.0,
+                                "pos_y": -264.12500000000006,
+                                "inputs": [
+                                    {
+                                        "id": 139728632720272,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139935068003248,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139935068003392,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139935068003584,
+                                        "index": 3,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139935068003776,
+                                        "index": 4,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139728632720304,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139935068003296,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139935068003488,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139935068003680,
+                                        "index": 3,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139935068003872,
+                                        "index": 4,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "class_initial": "CService1",
+                                    "function": "getConvertedExternalData",
+                                    "pipelines": 5
+                                },
+                                "op_code": 2
+                            },
+                            {
+                                "id": 139728632720336,
+                                "title": "Data Structure",
+                                "pos_x": 1376.0000000000002,
+                                "pos_y": -272.37500000000006,
+                                "inputs": [
+                                    {
+                                        "id": 139728632720432,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139935068004160,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139934779682928,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139728632720464,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139935068004304,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139934779683024,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "ExternalOutput1FromService1",
+                                    "object_member_0": "send_2:int32_t",
+                                    "object_member_1": "send_20:int32_t",
+                                    "object_member_2": "send_200:uint32_t"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 139935068001328,
+                                "title": "SmartConverter - External Input To Internal",
+                                "pos_x": -36.0,
+                                "pos_y": -292.62500000000006,
+                                "inputs": [
+                                    {
+                                        "id": 139935739062304,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139935739061968,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139936253723984,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139936253724368,
+                                        "index": 3,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139936253723504,
+                                        "index": 4,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139935739062208,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139936253723408,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139936253724272,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139936253724176,
+                                        "index": 3,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139936253723360,
+                                        "index": 4,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "class_initial": "CService1",
+                                    "function": "getConvertedInternalData",
+                                    "pipelines": 5
+                                },
+                                "op_code": 1
+                            },
+                            {
+                                "id": 139935068001280,
+                                "title": "Data Structure",
+                                "pos_x": -384.0,
+                                "pos_y": -327.62500000000006,
+                                "inputs": [
+                                    {
+                                        "id": 139935068002336,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139935068002528,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139935068002720,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139935068002432,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139935068002624,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139935068002816,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "ExternalInput1ToService1",
+                                    "object_member_0": "send_1:int32_t",
+                                    "object_member_1": "send_10:int32_t",
+                                    "object_member_2": "send_100:uint32_t"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 139935068002000,
+                                "title": "Data Structure",
+                                "pos_x": -385.0,
+                                "pos_y": -106.625,
+                                "inputs": [
+                                    {
+                                        "id": 139935739061920,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139935739062976,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139935739062784,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139935739062160,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "ExternalInput2ToService1",
+                                    "object_member_0": "send_11:uint8_t",
+                                    "object_member_1": "send_111:int64_t"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 139936254330432,
+                                "title": "Data Structure",
+                                "pos_x": 501.0,
+                                "pos_y": -79.125,
+                                "inputs": [
+                                    {
+                                        "id": 139936254330240,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139935068002912,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139936254226592,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139935068002960,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "CService1InteralData2",
+                                    "object_member_0": "expect_11:uint8_t",
+                                    "object_member_1": "expect_111:int64_t"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 139934779683168,
+                                "title": "Data Structure",
+                                "pos_x": 1375.7500000000002,
+                                "pos_y": -56.625,
+                                "inputs": [
+                                    {
+                                        "id": 139934779683456,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139934779683648,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139934779683552,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139934779683744,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "ExternalOutput2FromService1",
+                                    "object_member_0": "send_22:uint8_t",
+                                    "object_member_1": "send_222:int64_t"
+                                },
+                                "op_code": 0
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "id": 139728632720496,
+                                "edge_type": 2,
+                                "start": 139728632719856,
+                                "end": 139728632720272
+                            },
+                            {
+                                "id": 139728632720528,
+                                "edge_type": 2,
+                                "start": 139728632720304,
+                                "end": 139728632720432
+                            },
+                            {
+                                "id": 139935739062400,
+                                "edge_type": 2,
+                                "start": 139935068002432,
+                                "end": 139935739062304
+                            },
+                            {
+                                "id": 139936253723936,
+                                "edge_type": 2,
+                                "start": 139935068002624,
+                                "end": 139935739061968
+                            },
+                            {
+                                "id": 139936253906752,
+                                "edge_type": 2,
+                                "start": 139935068002816,
+                                "end": 139936253723984
+                            },
+                            {
+                                "id": 139935739062592,
+                                "edge_type": 2,
+                                "start": 139935739062784,
+                                "end": 139936253724368
+                            },
+                            {
+                                "id": 139935739062832,
+                                "edge_type": 2,
+                                "start": 139935739062160,
+                                "end": 139936253723504
+                            },
+                            {
+                                "id": 139936254020528,
+                                "edge_type": 2,
+                                "start": 139936253822144,
+                                "end": 139935068003248
+                            },
+                            {
+                                "id": 139935068003968,
+                                "edge_type": 2,
+                                "start": 139936253821568,
+                                "end": 139935068003392
+                            },
+                            {
+                                "id": 139935068004064,
+                                "edge_type": 2,
+                                "start": 139936254226592,
+                                "end": 139935068003584
+                            },
+                            {
+                                "id": 139935068004016,
+                                "edge_type": 2,
+                                "start": 139935068002960,
+                                "end": 139935068003776
+                            },
+                            {
+                                "id": 139935068004112,
+                                "edge_type": 2,
+                                "start": 139935068003296,
+                                "end": 139935068004160
+                            },
+                            {
+                                "id": 139934779683120,
+                                "edge_type": 2,
+                                "start": 139935068003488,
+                                "end": 139934779682928
+                            },
+                            {
+                                "id": 139934779683216,
+                                "edge_type": 2,
+                                "start": 139935068003680,
+                                "end": 139934779683456
+                            },
+                            {
+                                "id": 139934779683840,
+                                "edge_type": 2,
+                                "start": 139935068003872,
+                                "end": 139934779683648
+                            },
+                            {
+                                "id": 139934779683936,
+                                "edge_type": 2,
+                                "start": 139935739062208,
+                                "end": 139728632720176
+                            },
+                            {
+                                "id": 139934779683888,
+                                "edge_type": 2,
+                                "start": 139936253723408,
+                                "end": 139935739062736
+                            },
+                            {
+                                "id": 139934779684032,
+                                "edge_type": 2,
+                                "start": 139936253724272,
+                                "end": 139936253821904
+                            },
+                            {
+                                "id": 139934779683984,
+                                "edge_type": 2,
+                                "start": 139936253724176,
+                                "end": 139936254330240
+                            },
+                            {
+                                "id": 139934779684080,
+                                "edge_type": 2,
+                                "start": 139936253723360,
+                                "end": 139935068002912
+                            }
+                        ]
+                    },
+                    "error_handler": {
+                        "CalibrationFailure": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": true
+                        },
+                        "FileReadWriteOpenFailure": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "IndexOutOfBounds": {
+                            "DebouncingCriteria": "eCount",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateRun",
+                            "ThresholdToResetFailure": 5,
+                            "ThresholdToTriggerFailure": 5,
+                            "Use": true
+                        },
+                        "InvalidDataSize": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "InvalidDataValue": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "InvalidInput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "InvalidOutput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "MemoryReadWriteFailure": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "NullPointer": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "TimeOutInput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "TimeOutOutput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "Unknown": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        }
+                    }
+                }
+            },
+            "op_code": 1
+        },
+        {
+            "id": 139728441934992,
+            "title": "HostComponent",
+            "pos_x": -119.0,
+            "pos_y": -137.0,
+            "inputs": [],
+            "outputs": [],
+            "content": {
+                "name": "ServiceComponent2",
+                "id": "2",
+                "priority": "10",
+                "class": "CService2",
+                "config file": "config2",
+                "hidden": {
+                    "parameters": [
+                        {
+                            "name": "HostComponentLibName",
+                            "value": "libPFSP_ServiceName2.so"
+                        }
+                    ],
+                    "mode_manager": {
+                        "PlayType": "Repeat",
+                        "ThreadFrequency": 20,
+                        "eSWComponentOperationModeDegradation": false,
+                        "eSWComponentOperationModeDiagnostics": false,
+                        "eSWComponentOperationModeNormal": true
+                    },
+                    "smart_converter": {
+                        "id": 139728632718928,
+                        "scene_width": 64000,
+                        "scene_height": 64000,
+                        "nodes": [
+                            {
+                                "id": 139728632720112,
+                                "title": "Data Structure",
+                                "pos_x": -120.0,
+                                "pos_y": -125.0,
+                                "inputs": [
+                                    {
+                                        "id": 139728632720176,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139728632719856,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "CService2InteralData",
+                                    "object_member_0": "type_varname:int8_t"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 139728632720016,
+                                "title": "SmartConverter - Internal To External Output",
+                                "pos_x": 264.0,
+                                "pos_y": -127.0,
+                                "inputs": [
+                                    {
+                                        "id": 139728632720272,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139728632720304,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "class_initial": "CService2",
+                                    "function": "getConvertedExternalData",
+                                    "pipelines": 1
+                                },
+                                "op_code": 2
+                            },
+                            {
+                                "id": 139728632720336,
+                                "title": "Data Structure",
+                                "pos_x": 865.0,
+                                "pos_y": -124.0,
+                                "inputs": [
+                                    {
+                                        "id": 139728632720432,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139728632720464,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "ExternalOutputFromCService2",
+                                    "object_member_0": "type_varname:int8_t"
+                                },
+                                "op_code": 0
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "id": 139728632720496,
+                                "edge_type": 2,
+                                "start": 139728632719856,
+                                "end": 139728632720272
+                            },
+                            {
+                                "id": 139728632720528,
+                                "edge_type": 2,
+                                "start": 139728632720304,
+                                "end": 139728632720432
+                            }
+                        ]
+                    },
+                    "error_handler": {
+                        "CalibrationFailure": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "FileReadWriteOpenFailure": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "IndexOutOfBounds": {
+                            "DebouncingCriteria": "eCount",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateRun",
+                            "ThresholdToResetFailure": 5,
+                            "ThresholdToTriggerFailure": 5,
+                            "Use": true
+                        },
+                        "InvalidDataSize": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "InvalidDataValue": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "InvalidInput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "InvalidOutput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "MemoryReadWriteFailure": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "NullPointer": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "TimeOutInput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "TimeOutOutput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "Unknown": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        }
+                    }
+                }
+            },
+            "op_code": 1
+        },
+        {
+            "id": 139728441936288,
+            "title": "HostComponent",
+            "pos_x": 294.0,
+            "pos_y": -135.0,
+            "inputs": [],
+            "outputs": [],
+            "content": {
+                "name": "ServiceComponent3",
+                "id": "3",
+                "priority": "10",
+                "class": "CService3",
+                "config file": "config3",
+                "hidden": {
+                    "parameters": [
+                        {
+                            "name": "HostComponentLibName",
+                            "value": "libPFSP_ServiceName3.so"
+                        }
+                    ],
+                    "mode_manager": {
+                        "PlayType": "Repeat",
+                        "ThreadFrequency": 20,
+                        "eSWComponentOperationModeDegradation": false,
+                        "eSWComponentOperationModeDiagnostics": false,
+                        "eSWComponentOperationModeNormal": true
+                    },
+                    "smart_converter": {
+                        "id": 139728632718928,
+                        "scene_width": 64000,
+                        "scene_height": 64000,
+                        "nodes": [
+                            {
+                                "id": 139728632720112,
+                                "title": "Data Structure",
+                                "pos_x": -120.0,
+                                "pos_y": -125.0,
+                                "inputs": [
+                                    {
+                                        "id": 139728632720176,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139728632719856,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "CService3InteralData",
+                                    "object_member_0": "type_varname:int8_t"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 139728632720016,
+                                "title": "SmartConverter - Internal To External Output",
+                                "pos_x": 264.0,
+                                "pos_y": -127.0,
+                                "inputs": [
+                                    {
+                                        "id": 139728632720272,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139728632720304,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "class_initial": "CService3",
+                                    "function": "getConvertedExternalData",
+                                    "pipelines": 1
+                                },
+                                "op_code": 2
+                            },
+                            {
+                                "id": 139728632720336,
+                                "title": "Data Structure",
+                                "pos_x": 865.0,
+                                "pos_y": -124.0,
+                                "inputs": [
+                                    {
+                                        "id": 139728632720432,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139728632720464,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "ExternalOutputFromCService3",
+                                    "object_member_0": "type_varname:int8_t"
+                                },
+                                "op_code": 0
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "id": 139728632720496,
+                                "edge_type": 2,
+                                "start": 139728632719856,
+                                "end": 139728632720272
+                            },
+                            {
+                                "id": 139728632720528,
+                                "edge_type": 2,
+                                "start": 139728632720304,
+                                "end": 139728632720432
+                            }
+                        ]
+                    },
+                    "error_handler": {
+                        "CalibrationFailure": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "FileReadWriteOpenFailure": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "IndexOutOfBounds": {
+                            "DebouncingCriteria": "eCount",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateRun",
+                            "ThresholdToResetFailure": 5,
+                            "ThresholdToTriggerFailure": 5,
+                            "Use": true
+                        },
+                        "InvalidDataSize": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "InvalidDataValue": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "InvalidInput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "InvalidOutput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "MemoryReadWriteFailure": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "NullPointer": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "TimeOutInput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "TimeOutOutput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "Unknown": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        }
+                    }
+                }
+            },
+            "op_code": 1
+        }
+    ],
+    "edges": []
+}

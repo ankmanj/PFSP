@@ -1,0 +1,28 @@
+{
+    "PFSPMiddleware": {
+        "version": "1.0",
+        "xmlns": "http://www.dmg.org/PMML-3-0",
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema_instance",
+        "Header": {
+            "xmlns": "",
+            "copyright": "",
+            "Application": {
+                "name": "PFSP_MW",
+                "version": "2.0"
+            },
+            "text": "The PFSPMiddleware Service Configuration"
+        },
+        "parameterTable": {
+            "parameter": [
+                {
+                    "name": "PlayType",
+                    "value": "eRepeat"
+                },
+                {
+                    "name": "ThreadFrequency",
+                    "value": "10"
+                }
+            ]
+        }
+    }
+}

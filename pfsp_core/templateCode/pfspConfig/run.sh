@@ -1,0 +1,1 @@
+PFSP_main /pfsp_demo_first ../../pfsp_config/xml/pfsp_main_config.xml ../../pfsp_config/xml /PluginErrorHandler /PluginModeManager /HostApplication1 /HostApplication2 

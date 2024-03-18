@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<PFSPMiddleware xmlns="http://www.dmg.org/PMML-3-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema_instance" version="1.0">
+	<Header xmlns="" copyright="">
+		<Application name="/PFSP_MW" version="2.0"/>
+		The PFSPMiddleware System Configuration for PFSPArchitecture
+	</Header>
+	<nodeTable>
+		<node name="/pfsp_demo_first" id="1">
+			<connect name="/pc" path="server//192.168.0.11:9009" rx_buff_size="1048576" mode="async" priority="10" class="CTcpConnect"/>
+		</node>
+		<node name="/pc" id="2">
+			<connect name="/pfsp_demo_first" path="client//192.168.0.11:9009" rx_buff_size="1048576" mode="sync" priority="10" class="CTcpConnect"/>
+		</node>
+	</nodeTable>
+	<serviceTable>
+		<service name="/time" id="1" priority="12" core="0" mailbox_size="4096" class="CTimeService" node="/pfsp_demo_first">
+			<parameterFile file="time.xml"/>
+		</service>
+		<service name="/PluginErrorHandler" id="2" priority="1" core="0" mail_size="24692" mailbox_size="409600" class="PfspPluginErrorHandler" node="/pfsp_demo_first">
+			<parameterFile file="plugin_error_handler.xml"/>
+		</service>
+		<service name="/PluginModeManager" id="3" priority="2" core="0" mail_size="24692" mailbox_size="409600" class="PfspPluginModeManager" node="/pfsp_demo_first">
+			<parameterFile file="plugin_mode_manager.xml"/>
+		</service>
+		<service name="/component1" id="4" priority="3" class="CService1Base" core="0" mail_size="24692" mailbox_size="409600" node="/pfsp_demo_first">
+			<parameterFile file="config1.xml"/>
+		</service>
+		<service name="/component2" id="5" priority="4" class="CService2Base" core="0" mail_size="24692" mailbox_size="409600" node="/pfsp_demo_first">
+			<parameterFile file="config2.xml"/>
+		</service>
+		<service name="/component3" id="6" priority="5" class="CService3Base" core="0" mail_size="24692" mailbox_size="409600" node="/pfsp_demo_first">
+			<parameterFile file="config3.xml"/>
+		</service>
+	</serviceTable>
+	<topicTable>
+		<topic name="Timer" id="1" publisher="/time"/>
+		<topic name="ReactionReportTopic" id="2" publisher="/PluginErrorHandler"/>
+		<topic name="ComponentsReactionTopic" id="3" publisher="/PluginModeManager"/>
+		<topic name="HostComponent0OutputTopic" id="4" publisher="/component1"/>
+		<topic name="HostComponent0AllErrorsInfoTopic" id="5" publisher="/component1"/>
+		<topic name="HostComponent0AllModeInfoTopic" id="6" publisher="/component1"/>
+		<topic name="HostComponent0ErrorReportTopic" id="7" publisher="/component1"/>
+		<topic name="HostComponent0ModeStateReportTopic" id="8" publisher="/component1"/>
+		<topic name="HostComponent1OutputTopic" id="9" publisher="/component2"/>
+		<topic name="HostComponent1AllErrorsInfoTopic" id="10" publisher="/component2"/>
+		<topic name="HostComponent1AllModeInfoTopic" id="11" publisher="/component2"/>
+		<topic name="HostComponent1ErrorReportTopic" id="12" publisher="/component2"/>
+		<topic name="HostComponent1ModeStateReportTopic" id="13" publisher="/component2"/>
+		<topic name="HostComponent2OutputTopic" id="14" publisher="/component3"/>
+		<topic name="HostComponent2AllErrorsInfoTopic" id="15" publisher="/component3"/>
+		<topic name="HostComponent2AllModeInfoTopic" id="16" publisher="/component3"/>
+		<topic name="HostComponent2ErrorReportTopic" id="17" publisher="/component3"/>
+		<topic name="HostComponent2ModeStateReportTopic" id="18" publisher="/component3"/>
+	</topicTable>
+</PFSPMiddleware>

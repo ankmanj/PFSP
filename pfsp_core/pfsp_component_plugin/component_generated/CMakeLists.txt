@@ -1,0 +1,3 @@
+add_subdirectory(base_host_component_0)
+add_subdirectory(base_host_component_1)
+add_subdirectory(base_host_component_2)

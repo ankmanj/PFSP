@@ -1,0 +1,28 @@
+{
+    "PFSPMiddleware": {
+        "version": "1.0",
+        "xmlns": "http://www.dmg.org/PMML-3-0",
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema_instance",
+        "Header": {
+            "xmlns": "",
+            "copyright": "",
+            "Application": {
+                "name": "PFSP_MW",
+                "version": "0.9 beta"
+            },
+            "text": "The PFSPMiddleware for HIT."
+        },
+        "parameterTable": {
+            "parameter": [
+                {
+                    "name": "frequence",
+                    "value": "1"
+                },
+                {
+                    "name": "timerWorkerPriority",
+                    "value": "0"
+                }
+            ]
+        }
+    }
+}

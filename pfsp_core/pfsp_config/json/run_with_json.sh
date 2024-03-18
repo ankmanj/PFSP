@@ -1,0 +1,1 @@
+PFSP_main /pfsp_demo_first ../../pfsp_config/xml/pfsp_main_config.json ../../pfsp_config/xml /PluginErrorHandler /PluginModeManager /component1 /component2 /component3 

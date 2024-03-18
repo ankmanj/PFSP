@@ -1,0 +1,380 @@
+{
+    "PFSPMiddleware": {
+        "version": "1.0",
+        "xmlns": "http://www.dmg.org/PMML-3-0",
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema_instance",
+        "Header": {
+            "xmlns": "",
+            "copyright": "",
+            "text": "The PFSPMiddleware System Configuration for PFSPArchitecture",
+            "Application": {
+                "name": "/PFSP_MW",
+                "version": "2.0"
+            }
+        },
+        "parameterTable": {
+            "parameter": [
+                {
+                    "name": "HostComponentLibName",
+                    "value": "libPFSP_ServiceName2.so"
+                },
+                {
+                    "name": "PlayType",
+                    "value": "Repeat"
+                },
+                {
+                    "name": "ThreadFrequency",
+                    "value": 40
+                },
+                {
+                    "name": "eSWComponentOperationModeDegradation",
+                    "value": "eOff"
+                },
+                {
+                    "name": "eSWComponentOperationModeDiagnostics",
+                    "value": "eOff"
+                },
+                {
+                    "name": "eSWComponentOperationModeNormal",
+                    "value": "eOn"
+                },
+                {
+                    "name": "Error0",
+                    "value": "CalibrationFailure"
+                },
+                {
+                    "name": "Error0_DebouncingCriteria",
+                    "value": "eTime"
+                },
+                {
+                    "name": "Error0_ReactionMode",
+                    "value": "eSWComponentOperationModeNormal"
+                },
+                {
+                    "name": "Error0_ReactionState",
+                    "value": "eSWComponentStateTriggerInit"
+                },
+                {
+                    "name": "Error0_ThresholdToResetFailure",
+                    "value": 100
+                },
+                {
+                    "name": "Error0_ThresholdToTriggerFailure",
+                    "value": 1000
+                },
+                {
+                    "name": "Error0_Use",
+                    "value": "eOff"
+                },
+                {
+                    "name": "Error1",
+                    "value": "FileReadWriteOpenFailure"
+                },
+                {
+                    "name": "Error1_DebouncingCriteria",
+                    "value": "eTime"
+                },
+                {
+                    "name": "Error1_ReactionMode",
+                    "value": "eSWComponentOperationModeNormal"
+                },
+                {
+                    "name": "Error1_ReactionState",
+                    "value": "eSWComponentStateTriggerInit"
+                },
+                {
+                    "name": "Error1_ThresholdToResetFailure",
+                    "value": 100
+                },
+                {
+                    "name": "Error1_ThresholdToTriggerFailure",
+                    "value": 1000
+                },
+                {
+                    "name": "Error1_Use",
+                    "value": "eOff"
+                },
+                {
+                    "name": "Error2",
+                    "value": "IndexOutOfBounds"
+                },
+                {
+                    "name": "Error2_DebouncingCriteria",
+                    "value": "eCount"
+                },
+                {
+                    "name": "Error2_ReactionMode",
+                    "value": "eSWComponentOperationModeNormal"
+                },
+                {
+                    "name": "Error2_ReactionState",
+                    "value": "eSWComponentStateRun"
+                },
+                {
+                    "name": "Error2_ThresholdToResetFailure",
+                    "value": 5
+                },
+                {
+                    "name": "Error2_ThresholdToTriggerFailure",
+                    "value": 5
+                },
+                {
+                    "name": "Error2_Use",
+                    "value": "eOn"
+                },
+                {
+                    "name": "Error3",
+                    "value": "InvalidDataSize"
+                },
+                {
+                    "name": "Error3_DebouncingCriteria",
+                    "value": "eTime"
+                },
+                {
+                    "name": "Error3_ReactionMode",
+                    "value": "eSWComponentOperationModeNormal"
+                },
+                {
+                    "name": "Error3_ReactionState",
+                    "value": "eSWComponentStateTriggerInit"
+                },
+                {
+                    "name": "Error3_ThresholdToResetFailure",
+                    "value": 100
+                },
+                {
+                    "name": "Error3_ThresholdToTriggerFailure",
+                    "value": 1000
+                },
+                {
+                    "name": "Error3_Use",
+                    "value": "eOff"
+                },
+                {
+                    "name": "Error4",
+                    "value": "InvalidDataValue"
+                },
+                {
+                    "name": "Error4_DebouncingCriteria",
+                    "value": "eTime"
+                },
+                {
+                    "name": "Error4_ReactionMode",
+                    "value": "eSWComponentOperationModeNormal"
+                },
+                {
+                    "name": "Error4_ReactionState",
+                    "value": "eSWComponentStateTriggerInit"
+                },
+                {
+                    "name": "Error4_ThresholdToResetFailure",
+                    "value": 100
+                },
+                {
+                    "name": "Error4_ThresholdToTriggerFailure",
+                    "value": 1000
+                },
+                {
+                    "name": "Error4_Use",
+                    "value": "eOff"
+                },
+                {
+                    "name": "Error5",
+                    "value": "InvalidInput"
+                },
+                {
+                    "name": "Error5_DebouncingCriteria",
+                    "value": "eTime"
+                },
+                {
+                    "name": "Error5_ReactionMode",
+                    "value": "eSWComponentOperationModeNormal"
+                },
+                {
+                    "name": "Error5_ReactionState",
+                    "value": "eSWComponentStateTriggerInit"
+                },
+                {
+                    "name": "Error5_ThresholdToResetFailure",
+                    "value": 100
+                },
+                {
+                    "name": "Error5_ThresholdToTriggerFailure",
+                    "value": 1000
+                },
+                {
+                    "name": "Error5_Use",
+                    "value": "eOff"
+                },
+                {
+                    "name": "Error6",
+                    "value": "InvalidOutput"
+                },
+                {
+                    "name": "Error6_DebouncingCriteria",
+                    "value": "eTime"
+                },
+                {
+                    "name": "Error6_ReactionMode",
+                    "value": "eSWComponentOperationModeNormal"
+                },
+                {
+                    "name": "Error6_ReactionState",
+                    "value": "eSWComponentStateTriggerInit"
+                },
+                {
+                    "name": "Error6_ThresholdToResetFailure",
+                    "value": 100
+                },
+                {
+                    "name": "Error6_ThresholdToTriggerFailure",
+                    "value": 1000
+                },
+                {
+                    "name": "Error6_Use",
+                    "value": "eOff"
+                },
+                {
+                    "name": "Error7",
+                    "value": "MemoryReadWriteFailure"
+                },
+                {
+                    "name": "Error7_DebouncingCriteria",
+                    "value": "eTime"
+                },
+                {
+                    "name": "Error7_ReactionMode",
+                    "value": "eSWComponentOperationModeNormal"
+                },
+                {
+                    "name": "Error7_ReactionState",
+                    "value": "eSWComponentStateTriggerInit"
+                },
+                {
+                    "name": "Error7_ThresholdToResetFailure",
+                    "value": 100
+                },
+                {
+                    "name": "Error7_ThresholdToTriggerFailure",
+                    "value": 1000
+                },
+                {
+                    "name": "Error7_Use",
+                    "value": "eOff"
+                },
+                {
+                    "name": "Error8",
+                    "value": "NullPointer"
+                },
+                {
+                    "name": "Error8_DebouncingCriteria",
+                    "value": "eTime"
+                },
+                {
+                    "name": "Error8_ReactionMode",
+                    "value": "eSWComponentOperationModeNormal"
+                },
+                {
+                    "name": "Error8_ReactionState",
+                    "value": "eSWComponentStateTriggerInit"
+                },
+                {
+                    "name": "Error8_ThresholdToResetFailure",
+                    "value": 100
+                },
+                {
+                    "name": "Error8_ThresholdToTriggerFailure",
+                    "value": 1000
+                },
+                {
+                    "name": "Error8_Use",
+                    "value": "eOff"
+                },
+                {
+                    "name": "Error9",
+                    "value": "TimeOutInput"
+                },
+                {
+                    "name": "Error9_DebouncingCriteria",
+                    "value": "eTime"
+                },
+                {
+                    "name": "Error9_ReactionMode",
+                    "value": "eSWComponentOperationModeNormal"
+                },
+                {
+                    "name": "Error9_ReactionState",
+                    "value": "eSWComponentStateTriggerInit"
+                },
+                {
+                    "name": "Error9_ThresholdToResetFailure",
+                    "value": 100
+                },
+                {
+                    "name": "Error9_ThresholdToTriggerFailure",
+                    "value": 1000
+                },
+                {
+                    "name": "Error9_Use",
+                    "value": "eOff"
+                },
+                {
+                    "name": "Error10",
+                    "value": "TimeOutOutput"
+                },
+                {
+                    "name": "Error10_DebouncingCriteria",
+                    "value": "eTime"
+                },
+                {
+                    "name": "Error10_ReactionMode",
+                    "value": "eSWComponentOperationModeNormal"
+                },
+                {
+                    "name": "Error10_ReactionState",
+                    "value": "eSWComponentStateTriggerInit"
+                },
+                {
+                    "name": "Error10_ThresholdToResetFailure",
+                    "value": 100
+                },
+                {
+                    "name": "Error10_ThresholdToTriggerFailure",
+                    "value": 1000
+                },
+                {
+                    "name": "Error10_Use",
+                    "value": "eOff"
+                },
+                {
+                    "name": "Error11",
+                    "value": "Unknown"
+                },
+                {
+                    "name": "Error11_DebouncingCriteria",
+                    "value": "eTime"
+                },
+                {
+                    "name": "Error11_ReactionMode",
+                    "value": "eSWComponentOperationModeNormal"
+                },
+                {
+                    "name": "Error11_ReactionState",
+                    "value": "eSWComponentStateTriggerInit"
+                },
+                {
+                    "name": "Error11_ThresholdToResetFailure",
+                    "value": 100
+                },
+                {
+                    "name": "Error11_ThresholdToTriggerFailure",
+                    "value": 1000
+                },
+                {
+                    "name": "Error11_Use",
+                    "value": "eOff"
+                }
+            ]
+        }
+    }
+}

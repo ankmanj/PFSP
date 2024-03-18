@@ -1,0 +1,3 @@
+[submodule "lib/data_map_gen"]
+	path = lib/data_map_gen
+	url = git@github.com:Auto-Arch/data_map_gen.git

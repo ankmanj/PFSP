@@ -1,0 +1,1886 @@
+{
+    "id": 139971441232576,
+    "scene_width": 64000,
+    "scene_height": 64000,
+    "nodes": [
+        {
+            "id": 139971106254800,
+            "title": "HostComponent",
+            "pos_x": -370.0,
+            "pos_y": -229.0,
+            "inputs": [],
+            "outputs": [],
+            "content": {
+                "name": "TestApp1",
+                "id": "1",
+                "priority": "1",
+                "class": "CTestApp1Service",
+                "config file": "TestAppConfig1",
+                "hidden": {
+                    "parameters": [
+                        {
+                            "name": "HostComponentLibName",
+                            "value": "libPFSP_TestApp1.so"
+                        },
+                        {
+                            "name": "test1",
+                            "value": "value1"
+                        },
+                        {
+                            "name": "test2",
+                            "value": "value2"
+                        }
+                    ],
+                    "mode_manager": {
+                        "eSWComponentOperationModeNormal": false,
+                        "eSWComponentOperationModeDegradation": true,
+                        "eSWComponentOperationModeDiagnostics": false,
+                        "PlayType": "Once",
+                        "ThreadFrequency": 100
+                    },
+                    "error_handler": {
+                        "CalibrationFailure": {
+                            "Use": true,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "InvalidInput": {
+                            "Use": false,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "InvalidOutput": {
+                            "Use": false,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "TimeOutInput": {
+                            "Use": false,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "TimeOutOutput": {
+                            "Use": false,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "MemoryReadWriteFailure": {
+                            "Use": false,
+                            "DebouncingCriteria": "eCount",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeDiagnostics",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "NullPointer": {
+                            "Use": false,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "InvalidDataValue": {
+                            "Use": false,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "InvalidDataSize": {
+                            "Use": false,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "IndexOutOfBounds": {
+                            "Use": false,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "FileReadWriteOpenFailure": {
+                            "Use": false,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "Unknown": {
+                            "Use": false,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        }
+                    },
+                    "smart_converter": {
+                        "id": 140247595083952,
+                        "scene_width": 64000,
+                        "scene_height": 64000,
+                        "nodes": [
+                            {
+                                "id": 140247595152048,
+                                "title": "Data Structure",
+                                "pos_x": -966.1875,
+                                "pos_y": -119.0,
+                                "inputs": [
+                                    {
+                                        "id": 139658260071232,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260071424,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260071616,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139658260071280,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260071520,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260071712,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "OFObject",
+                                    "object_member_0": "stamp:int64",
+                                    "object_member_1": "obj_type:int64",
+                                    "object_member_2": "vehicle_loc:Location"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 140599969330128,
+                                "title": "SmartConverter - External Input To Internal",
+                                "pos_x": -586.1875,
+                                "pos_y": -101.0,
+                                "inputs": [
+                                    {
+                                        "id": 139658260128720,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260128912,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260129104,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260129296,
+                                        "index": 3,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260129488,
+                                        "index": 4,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260129680,
+                                        "index": 5,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139658260128816,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260129008,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260129200,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260129392,
+                                        "index": 3,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260129584,
+                                        "index": 4,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260129776,
+                                        "index": 5,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "class_initial": "CHostApp1",
+                                    "function": "getConvertedInternalData",
+                                    "pipelines": 6
+                                },
+                                "op_code": 1
+                            },
+                            {
+                                "id": 140599969331184,
+                                "title": "SmartConverter - Internal To External Output",
+                                "pos_x": 348.81250000000006,
+                                "pos_y": -110.0,
+                                "inputs": [
+                                    {
+                                        "id": 139658243664096,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243664240,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243664432,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243664624,
+                                        "index": 3,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243664816,
+                                        "index": 4,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243665008,
+                                        "index": 5,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243665200,
+                                        "index": 6,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139658243664144,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243664336,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243664528,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243664720,
+                                        "index": 3,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243664912,
+                                        "index": 4,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243665104,
+                                        "index": 5,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243665296,
+                                        "index": 6,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "class_initial": "CHostApp1",
+                                    "function": "getConvertedExternalData",
+                                    "pipelines": 7
+                                },
+                                "op_code": 2
+                            },
+                            {
+                                "id": 139658260111264,
+                                "title": "Data Structure",
+                                "pos_x": -965.1875,
+                                "pos_y": 100.0,
+                                "inputs": [
+                                    {
+                                        "id": 139658260128144,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260128336,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260128528,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139658260128240,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260128432,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260128624,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "FusedRoad",
+                                    "object_member_0": "stamp:int64",
+                                    "object_member_1": "detected_lane_num:int64",
+                                    "object_member_2": "lane_color:int64"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 139658260130976,
+                                "title": "Data Structure",
+                                "pos_x": -41.187499999999886,
+                                "pos_y": -208.0,
+                                "inputs": [
+                                    {
+                                        "id": 139658260131312,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260131504,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260131696,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243661936,
+                                        "index": 3,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139658260131408,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260131600,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260131792,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243662032,
+                                        "index": 3,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "InternalObject",
+                                    "object_member_0": "time:int64",
+                                    "object_member_1": "object:int64",
+                                    "object_member_2": "fused_obj_loc:Location2D",
+                                    "object_member_3": "risk_level:int64"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 139658243662128,
+                                "title": "Data Structure",
+                                "pos_x": -40.187499999999886,
+                                "pos_y": 52.0,
+                                "inputs": [
+                                    {
+                                        "id": 139658243662464,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139658243662560,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "InternalSomething",
+                                    "object_member_0": "some:string"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 139658243662656,
+                                "title": "Data Structure",
+                                "pos_x": -41.187499999999886,
+                                "pos_y": 201.0,
+                                "inputs": [
+                                    {
+                                        "id": 139658243662992,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243663184,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243663376,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243663568,
+                                        "index": 3,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139658243663088,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243663280,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243663472,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243663664,
+                                        "index": 3,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "RoadInfo",
+                                    "object_member_0": "time:int64",
+                                    "object_member_1": "lane_num:int64",
+                                    "object_member_2": "lane_type:int64",
+                                    "object_member_3": "save_time:int64"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 139658243665776,
+                                "title": "Data Structure",
+                                "pos_x": 970.4375,
+                                "pos_y": -109.5,
+                                "inputs": [
+                                    {
+                                        "id": 139657773400656,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139657773400848,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139657773401040,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139657773401232,
+                                        "index": 3,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139657773400752,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139657773400944,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139657773401136,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139657773401328,
+                                        "index": 3,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "PriorityObject",
+                                    "object_member_0": "time:int64",
+                                    "object_member_1": "type:int64",
+                                    "object_member_2": "priority:int64",
+                                    "object_member_3": "name:string"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 139657773400320,
+                                "title": "Data Structure",
+                                "pos_x": 967.3125,
+                                "pos_y": 152.24999999999994,
+                                "inputs": [
+                                    {
+                                        "id": 139657773401424,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139657773401616,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139657773401808,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139657773401520,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139657773401712,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139657773401904,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "DrivablePath",
+                                    "object_member_0": "time:int64",
+                                    "object_member_1": "lane_num:int64",
+                                    "object_member_2": "driving_window:int64"
+                                },
+                                "op_code": 0
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "id": 139658260111216,
+                                "edge_type": 2,
+                                "start": 139658260071280,
+                                "end": 139658260128720
+                            },
+                            {
+                                "id": 139658260129872,
+                                "edge_type": 2,
+                                "start": 139658260071520,
+                                "end": 139658260128912
+                            },
+                            {
+                                "id": 139658260130688,
+                                "edge_type": 2,
+                                "start": 139658260071712,
+                                "end": 139658260129104
+                            },
+                            {
+                                "id": 139658260130736,
+                                "edge_type": 2,
+                                "start": 139658260128240,
+                                "end": 139658260129296
+                            },
+                            {
+                                "id": 139658260130784,
+                                "edge_type": 2,
+                                "start": 139658260128432,
+                                "end": 139658260129488
+                            },
+                            {
+                                "id": 139658260130640,
+                                "edge_type": 2,
+                                "start": 139658260128624,
+                                "end": 139658260129680
+                            },
+                            {
+                                "id": 139658260130880,
+                                "edge_type": 2,
+                                "start": 139658260128816,
+                                "end": 139658260131312
+                            },
+                            {
+                                "id": 139658243663760,
+                                "edge_type": 2,
+                                "start": 139658260129008,
+                                "end": 139658260131504
+                            },
+                            {
+                                "id": 139658243663856,
+                                "edge_type": 2,
+                                "start": 139658260129200,
+                                "end": 139658260131696
+                            },
+                            {
+                                "id": 139658243663904,
+                                "edge_type": 2,
+                                "start": 139658260129392,
+                                "end": 139658243662992
+                            },
+                            {
+                                "id": 139658243663952,
+                                "edge_type": 2,
+                                "start": 139658260129584,
+                                "end": 139658243663184
+                            },
+                            {
+                                "id": 139658243664000,
+                                "edge_type": 2,
+                                "start": 139658260129776,
+                                "end": 139658243663568
+                            },
+                            {
+                                "id": 139658243664048,
+                                "edge_type": 2,
+                                "start": 139658260131408,
+                                "end": 139658243664096
+                            },
+                            {
+                                "id": 139658243665392,
+                                "edge_type": 2,
+                                "start": 139658260131600,
+                                "end": 139658243664240
+                            },
+                            {
+                                "id": 139658243665488,
+                                "edge_type": 2,
+                                "start": 139658243662032,
+                                "end": 139658243664432
+                            },
+                            {
+                                "id": 139658243665536,
+                                "edge_type": 2,
+                                "start": 139658243662560,
+                                "end": 139658243664624
+                            },
+                            {
+                                "id": 139658243665584,
+                                "edge_type": 2,
+                                "start": 139658243663088,
+                                "end": 139658243664816
+                            },
+                            {
+                                "id": 139658243665632,
+                                "edge_type": 2,
+                                "start": 139658243663280,
+                                "end": 139658243665008
+                            },
+                            {
+                                "id": 139658243665680,
+                                "edge_type": 2,
+                                "start": 139658243663664,
+                                "end": 139658243665200
+                            },
+                            {
+                                "id": 139658243665728,
+                                "edge_type": 2,
+                                "start": 139658243664144,
+                                "end": 139657773400656
+                            },
+                            {
+                                "id": 139657773402048,
+                                "edge_type": 2,
+                                "start": 139658243664336,
+                                "end": 139657773400848
+                            },
+                            {
+                                "id": 139657773402096,
+                                "edge_type": 2,
+                                "start": 139658243664528,
+                                "end": 139657773401040
+                            },
+                            {
+                                "id": 139657773402144,
+                                "edge_type": 2,
+                                "start": 139658243664720,
+                                "end": 139657773401232
+                            },
+                            {
+                                "id": 139657773402192,
+                                "edge_type": 2,
+                                "start": 139658243664912,
+                                "end": 139657773401424
+                            },
+                            {
+                                "id": 139657773402240,
+                                "edge_type": 2,
+                                "start": 139658243665104,
+                                "end": 139657773401616
+                            },
+                            {
+                                "id": 139657773402288,
+                                "edge_type": 2,
+                                "start": 139658243665296,
+                                "end": 139657773401808
+                            }
+                        ]
+                    }
+                }
+            },
+            "op_code": 1
+        },
+        {
+            "id": 139971106327664,
+            "title": "HostComponent",
+            "pos_x": 106.0,
+            "pos_y": -231.0,
+            "inputs": [],
+            "outputs": [],
+            "content": {
+                "name": "TestApp2",
+                "id": "2",
+                "priority": "10",
+                "class": "CTestApp2Service",
+                "config file": "TestAppConfig2",
+                "hidden": {
+                    "parameters": [
+                        {
+                            "name": "HostComponentLibName",
+                            "value": "libPFSP_TestApp2.so"
+                        },
+                        {
+                            "name": "test22",
+                            "value": "value22"
+                        }
+                    ],
+                    "mode_manager": {
+                        "eSWComponentOperationModeNormal": true,
+                        "eSWComponentOperationModeDegradation": false,
+                        "eSWComponentOperationModeDiagnostics": true,
+                        "PlayType": "Repeat",
+                        "ThreadFrequency": 99
+                    },
+                    "error_handler": {
+                        "CalibrationFailure": {
+                            "Use": false,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "InvalidInput": {
+                            "Use": true,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "InvalidOutput": {
+                            "Use": false,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "TimeOutInput": {
+                            "Use": false,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "TimeOutOutput": {
+                            "Use": false,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "MemoryReadWriteFailure": {
+                            "Use": true,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "NullPointer": {
+                            "Use": false,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "InvalidDataValue": {
+                            "Use": false,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "InvalidDataSize": {
+                            "Use": true,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "IndexOutOfBounds": {
+                            "Use": false,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "FileReadWriteOpenFailure": {
+                            "Use": false,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        },
+                        "Unknown": {
+                            "Use": false,
+                            "DebouncingCriteria": "eTime",
+                            "ThresholdToTriggerFailure": 1000,
+                            "ThresholdToResetFailure": 100,
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit"
+                        }
+                    },
+                    "smart_converter": {
+                        "id": 140247595083953,
+                        "scene_width": 64000,
+                        "scene_height": 64000,
+                        "nodes": [
+                            {
+                                "id": 140247595152049,
+                                "title": "Data Structure",
+                                "pos_x": 949.8281249999995,
+                                "pos_y": -91.65625000000001,
+                                "inputs": [
+                                    {
+                                        "id": 139658260071233,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260071425,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260071617,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139658260071281,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260071521,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260071713,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "OFObject",
+                                    "object_member_0": "stamp:int64",
+                                    "object_member_1": "obj_type:int64",
+                                    "object_member_2": "vehicle_loc:Location"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 140599969330129,
+                                "title": "SmartConverter - External Input To Internal",
+                                "pos_x": -586.1875,
+                                "pos_y": -101.0,
+                                "inputs": [
+                                    {
+                                        "id": 139658260128721,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260128913,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260129105,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260129297,
+                                        "index": 3,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260129489,
+                                        "index": 4,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260129681,
+                                        "index": 5,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139658260128817,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260129009,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260129201,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260129393,
+                                        "index": 3,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260129585,
+                                        "index": 4,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260129777,
+                                        "index": 5,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "class_initial": "CHostApp1",
+                                    "function": "getConvertedInternalData",
+                                    "pipelines": 6
+                                },
+                                "op_code": 1
+                            },
+                            {
+                                "id": 140599969331185,
+                                "title": "SmartConverter - Internal To External Output",
+                                "pos_x": 348.81250000000006,
+                                "pos_y": -110.0,
+                                "inputs": [
+                                    {
+                                        "id": 139658243664097,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243664241,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243664433,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243664625,
+                                        "index": 3,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243664817,
+                                        "index": 4,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243665009,
+                                        "index": 5,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243665201,
+                                        "index": 6,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139658243664145,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243664337,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243664529,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243664721,
+                                        "index": 3,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243664913,
+                                        "index": 4,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243665105,
+                                        "index": 5,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243665297,
+                                        "index": 6,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "class_initial": "CHostApp1",
+                                    "function": "getConvertedExternalData",
+                                    "pipelines": 7
+                                },
+                                "op_code": 2
+                            },
+                            {
+                                "id": 139658260111265,
+                                "title": "Data Structure",
+                                "pos_x": 950.8281249999995,
+                                "pos_y": 127.34375,
+                                "inputs": [
+                                    {
+                                        "id": 139658260128145,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260128337,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260128529,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139658260128241,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260128433,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260128625,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "FusedRoad",
+                                    "object_member_0": "stamp:int64",
+                                    "object_member_1": "detected_lane_num:int64",
+                                    "object_member_2": "lane_color:int64"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 139658260130977,
+                                "title": "Data Structure",
+                                "pos_x": -41.187499999999886,
+                                "pos_y": -208.0,
+                                "inputs": [
+                                    {
+                                        "id": 139658260131313,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260131505,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658260131697,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243661937,
+                                        "index": 3,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139658260131409,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260131601,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658260131793,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243662033,
+                                        "index": 3,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "InternalObject",
+                                    "object_member_0": "time:int64",
+                                    "object_member_1": "object:int64",
+                                    "object_member_2": "fused_obj_loc:Location2D",
+                                    "object_member_3": "risk_level:int64"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 139658243662129,
+                                "title": "Data Structure",
+                                "pos_x": -40.187499999999886,
+                                "pos_y": 52.0,
+                                "inputs": [
+                                    {
+                                        "id": 139658243662465,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139658243662561,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "InternalSomething",
+                                    "object_member_0": "some:string"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 139658243662657,
+                                "title": "Data Structure",
+                                "pos_x": -41.187499999999886,
+                                "pos_y": 201.0,
+                                "inputs": [
+                                    {
+                                        "id": 139658243662993,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243663185,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243663377,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139658243663569,
+                                        "index": 3,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139658243663089,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243663281,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243663473,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139658243663665,
+                                        "index": 3,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "RoadInfo",
+                                    "object_member_0": "time:int64",
+                                    "object_member_1": "lane_num:int64",
+                                    "object_member_2": "lane_type:int64",
+                                    "object_member_3": "save_time:int64"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 139658243665777,
+                                "title": "Data Structure",
+                                "pos_x": -1033.4687499999995,
+                                "pos_y": -125.12499999999999,
+                                "inputs": [
+                                    {
+                                        "id": 139657773400657,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139657773400849,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139657773401041,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139657773401233,
+                                        "index": 3,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139657773400753,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139657773400945,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139657773401137,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139657773401329,
+                                        "index": 3,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "PriorityObject",
+                                    "object_member_0": "time:int64",
+                                    "object_member_1": "type:int64",
+                                    "object_member_2": "priority:int64",
+                                    "object_member_3": "name:string"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 139657773400321,
+                                "title": "Data Structure",
+                                "pos_x": -1036.5937499999993,
+                                "pos_y": 136.62499999999994,
+                                "inputs": [
+                                    {
+                                        "id": 139657773401425,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139657773401617,
+                                        "index": 1,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    },
+                                    {
+                                        "id": 139657773401809,
+                                        "index": 2,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 139657773401521,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139657773401713,
+                                        "index": 1,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    },
+                                    {
+                                        "id": 139657773401905,
+                                        "index": 2,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "DrivablePath",
+                                    "object_member_0": "time:int64",
+                                    "object_member_1": "lane_num:int64",
+                                    "object_member_2": "driving_window:int64"
+                                },
+                                "op_code": 0
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "id": 139658260130881,
+                                "edge_type": 2,
+                                "start": 139658260128817,
+                                "end": 139658260131313
+                            },
+                            {
+                                "id": 139658243663761,
+                                "edge_type": 2,
+                                "start": 139658260129009,
+                                "end": 139658260131505
+                            },
+                            {
+                                "id": 139658243663857,
+                                "edge_type": 2,
+                                "start": 139658260129201,
+                                "end": 139658260131697
+                            },
+                            {
+                                "id": 139658243663905,
+                                "edge_type": 2,
+                                "start": 139658260129393,
+                                "end": 139658243662993
+                            },
+                            {
+                                "id": 139658243663953,
+                                "edge_type": 2,
+                                "start": 139658260129585,
+                                "end": 139658243663185
+                            },
+                            {
+                                "id": 139658243664001,
+                                "edge_type": 2,
+                                "start": 139658260129777,
+                                "end": 139658243663569
+                            },
+                            {
+                                "id": 139658243664049,
+                                "edge_type": 2,
+                                "start": 139658260131409,
+                                "end": 139658243664097
+                            },
+                            {
+                                "id": 139658243665393,
+                                "edge_type": 2,
+                                "start": 139658260131601,
+                                "end": 139658243664241
+                            },
+                            {
+                                "id": 139658243665489,
+                                "edge_type": 2,
+                                "start": 139658243662033,
+                                "end": 139658243664433
+                            },
+                            {
+                                "id": 139658243665537,
+                                "edge_type": 2,
+                                "start": 139658243662561,
+                                "end": 139658243664625
+                            },
+                            {
+                                "id": 139658243665585,
+                                "edge_type": 2,
+                                "start": 139658243663089,
+                                "end": 139658243664817
+                            },
+                            {
+                                "id": 139658243665633,
+                                "edge_type": 2,
+                                "start": 139658243663281,
+                                "end": 139658243665009
+                            },
+                            {
+                                "id": 139658243665681,
+                                "edge_type": 2,
+                                "start": 139658243663665,
+                                "end": 139658243665201
+                            },
+                            {
+                                "id": 139832257067472,
+                                "edge_type": 2,
+                                "start": 139658243664145,
+                                "end": 139658260071233
+                            },
+                            {
+                                "id": 139832257065216,
+                                "edge_type": 2,
+                                "start": 139658243664337,
+                                "end": 139658260071425
+                            },
+                            {
+                                "id": 139832257065120,
+                                "edge_type": 2,
+                                "start": 139658243664529,
+                                "end": 139658260071617
+                            },
+                            {
+                                "id": 139832257067376,
+                                "edge_type": 2,
+                                "start": 139657773400753,
+                                "end": 139658260128721
+                            },
+                            {
+                                "id": 139832257065024,
+                                "edge_type": 2,
+                                "start": 139657773400945,
+                                "end": 139658260128913
+                            },
+                            {
+                                "id": 139832257067328,
+                                "edge_type": 2,
+                                "start": 139657773401137,
+                                "end": 139658260129105
+                            },
+                            {
+                                "id": 139832257067280,
+                                "edge_type": 2,
+                                "start": 139657773401521,
+                                "end": 139658260129297
+                            },
+                            {
+                                "id": 139832257067232,
+                                "edge_type": 2,
+                                "start": 139657773401713,
+                                "end": 139658260129489
+                            },
+                            {
+                                "id": 139832257067184,
+                                "edge_type": 2,
+                                "start": 139657773401905,
+                                "end": 139658260129681
+                            },
+                            {
+                                "id": 139832257067040,
+                                "edge_type": 2,
+                                "start": 139658243664913,
+                                "end": 139658260128145
+                            },
+                            {
+                                "id": 139832257067088,
+                                "edge_type": 2,
+                                "start": 139658243665105,
+                                "end": 139658260128337
+                            },
+                            {
+                                "id": 139832257067424,
+                                "edge_type": 2,
+                                "start": 139658243665297,
+                                "end": 139658260128529
+                            }
+                        ]
+                    }
+                }
+            },
+            "op_code": 1
+        }
+    ],
+    "edges": []
+}

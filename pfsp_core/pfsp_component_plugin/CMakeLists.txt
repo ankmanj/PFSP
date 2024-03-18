@@ -1,0 +1,3 @@
+add_subdirectory(component_generated)
+add_subdirectory(error_handler)
+add_subdirectory(mode_manager)

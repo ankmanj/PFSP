@@ -1,0 +1,126 @@
+{
+    "SmartConverter - External Input To Internal": {
+        "function": "getConvertedInternalData",
+        "smart_converter_component_id": 1,
+        "includes": [
+            "pfsp_core_smart_converter_int.hpp"
+        ],
+        "class_initial": "CHostApp1",
+        "data_map": {
+            "InternalObject": [
+                {
+                    "dst_var_name": "time",
+                    "dtype": "int64",
+                    "from": "PriorityObject",
+                    "assigne": "time",
+                    "stype": "int64",
+                    "scomponent_id": 0
+                },
+                {
+                    "dst_var_name": "object",
+                    "dtype": "int64",
+                    "from": "PriorityObject",
+                    "assigne": "type",
+                    "stype": "int64",
+                    "scomponent_id": 0
+                },
+                {
+                    "dst_var_name": "fused_obj_loc",
+                    "dtype": "int64",
+                    "from": "PriorityObject",
+                    "assigne": "priority",
+                    "stype": "int64",
+                    "scomponent_id": 0
+                }
+            ],
+            "RoadInfo": [
+                {
+                    "dst_var_name": "time",
+                    "dtype": "int64",
+                    "from": "DrivablePath",
+                    "assigne": "time",
+                    "stype": "int64",
+                    "scomponent_id": 0
+                },
+                {
+                    "dst_var_name": "lane_num",
+                    "dtype": "int64",
+                    "from": "DrivablePath",
+                    "assigne": "lane_num",
+                    "stype": "int64",
+                    "scomponent_id": 0
+                },
+                {
+                    "dst_var_name": "save_time",
+                    "dtype": "int64",
+                    "from": "DrivablePath",
+                    "assigne": "driving_window",
+                    "stype": "int64",
+                    "scomponent_id": 0
+                }
+            ]
+        }
+    },
+    "SmartConverter - Internal To External Output": {
+        "function": "getConvertedExternalData",
+        "smart_converter_component_id": 1,
+        "includes": [
+            "pfsp_core_smart_converter_ext.hpp"
+        ],
+        "class_initial": "CHostApp1",
+        "data_map": {
+            "OFObject": [
+                {
+                    "dst_var_name": "stamp",
+                    "dtype": "int64",
+                    "from": "InternalObject",
+                    "assigne": "time",
+                    "stype": "int64",
+                    "scomponent_id": 1
+                },
+                {
+                    "dst_var_name": "obj_type",
+                    "dtype": "int64",
+                    "from": "InternalObject",
+                    "assigne": "object",
+                    "stype": "int64",
+                    "scomponent_id": 1
+                },
+                {
+                    "dst_var_name": "vehicle_loc",
+                    "dtype": "int64",
+                    "from": "InternalObject",
+                    "assigne": "risk_level",
+                    "stype": "int64",
+                    "scomponent_id": 1
+                }
+            ],
+            "FusedRoad": [
+                {
+                    "dst_var_name": "stamp",
+                    "dtype": "int64",
+                    "from": "RoadInfo",
+                    "assigne": "time",
+                    "stype": "int64",
+                    "scomponent_id": 1
+                },
+                {
+                    "dst_var_name": "detected_lane_num",
+                    "dtype": "int64",
+                    "from": "RoadInfo",
+                    "assigne": "lane_num",
+                    "stype": "int64",
+                    "scomponent_id": 1
+                },
+                {
+                    "dst_var_name": "lane_color",
+                    "dtype": "int64",
+                    "from": "RoadInfo",
+                    "assigne": "save_time",
+                    "stype": "int64",
+                    "scomponent_id": 1
+                }
+            ]
+        }
+    }
+}

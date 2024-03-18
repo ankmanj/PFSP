@@ -1,0 +1,2 @@
+add_subdirectory(host_application_1)
+add_subdirectory(host_application_2)

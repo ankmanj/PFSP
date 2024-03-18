@@ -1,0 +1,342 @@
+import os
+import sys
+import argparse
+import glob
+import json
+
+from pprint import PrettyPrinter
+#from code_generator import *
+#from cpp_generator import *
+
+pp = PrettyPrinter(indent=2, compact=True).pprint
+
+defaultInputDir = '../../pfsp_config/json'
+# inputFilePattern = 'smart_converter_host_component[0-9].json'
+inputFilePattern = 'smart_converter_[0-9]_*.json'
+# externalToInternalKeyword = 'SmartConverterToInternalBase'
+externalToInternalKeyword = 'SmartConverter - External Input To Internal'
+# internalToExternalKeyword = 'SmartConverterToExternalBase'
+internalToExternalKeyword = 'SmartConverter - Internal To External Output'
+
+defaultOutputBaseDir = '../../pfsp_component_plugin/component_generated'
+allInOneRelativeDir = '../../pfsp_component_plugin/component_generated/external_interface'
+allInOneFilename = 'smart_converter_external_interface.h'
+privateHeaderRelativeDir = '../../pfsp_component_plugin/component_generated/base_host_component_{}/include'
+privateHeaderFilename = 'smart_converter_core.h'
+
+internalDataPrivateHeaderRelativeDir = '../../../host_components/{}/include'
+internalDataPrivateHeaderFilename = '{}_internal_data.h'
+
+def main(argv):
+  parser = argparse.ArgumentParser(description='generate smart_converter_headers.h')
+  parser.add_argument(
+    '--input-dir', action='store', nargs='?', required=False,
+    dest='input_dir', type=str, default= defaultInputDir,
+    help='Specify the directiory with ' + inputFilePattern
+  )
+  parser.add_argument(
+    '--output-base-dir', action='store', nargs='?', required=False,
+    dest='output_base_dir', type=str, default=defaultOutputBaseDir,
+    help='Specify the directory for saving ' + allInOneFilename
+  )
+
+  args = parser.parse_args()
+  if not os.path.isdir(args.input_dir):
+    raise Exception('No directory for reading JSON fies')
+  if not os.path.isdir(args.output_base_dir):
+    raise Exception('No directory for saving smart_converter_typedef.h')
+
+  print('input_dir:', args.input_dir)
+  print('output_base_dir:', args.output_base_dir)
+
+  all_class_dict = dict()
+  host_component_dict = dict()
+  
+  
+  '''
+  input_filenames = glob.glob(args.input_dir + '/' + inputFilePattern)
+  print('input_filenames:', input_filenames)
+  for filename in input_filenames:
+    print('input filename:', filename)
+    with open(filename, 'r') as f:
+      input_class_set = set()
+      internal_class_set = set()
+      output_class_set = set()
+      
+      json_data = json.load(f)
+      for k,v in json_data.items():
+        print('key:', k)
+        for class_name,mappings in v['data_map'].items():
+          # print('class_name:', class_name)
+          if k == externalToInternalKeyword:
+            internal_class_set.add(class_name)
+          elif k == internalToExternalKeyword:
+            output_class_set.add(class_name)
+          
+          for connection in mappings:
+            var_name = connection['dst_var_name']
+            var_type = connection['dtype']
+
+            if class_name in all_class_dict.keys():
+              all_class_dict[class_name][var_name] = var_type
+            else:
+              all_class_dict[class_name] = {var_name:var_type}
+
+            source_class_name = connection['from']
+            source_var_name = connection['assigne']
+            source_var_type = connection['stype']
+              
+            if source_class_name in all_class_dict.keys():
+              all_class_dict[source_class_name][source_var_name] = source_var_type
+            else:
+              all_class_dict[source_class_name] = {
+                source_var_name: source_var_type,
+              }
+
+            if k == externalToInternalKeyword:
+              input_class_set.add(source_class_name)
+            elif k == internalToExternalKeyword:
+              internal_class_set.add(source_class_name)
+              
+      host_component_dict[os.path.basename(filename)] = {
+        'ExternalInputs': input_class_set,
+        'Internals': internal_class_set,
+        'ExternalOutputs': output_class_set
+      }
+
+  # print('host_component_dict:')
+  # pp(host_component_dict)
+  # print('all_class_dict:')
+  # pp(all_class_dict)
+
+  new_host_component_dict = dict()
+  for host_key,section_dict in host_component_dict.items():
+    new_host_component_dict[host_key] = dict()
+    for section,class_set in section_dict.items():
+      new_host_component_dict[host_key][section] = dict()
+      for class_name in class_set:
+        new_host_component_dict[host_key][section][class_name] = all_class_dict[class_name]
+
+  pp(new_host_component_dict)
+  '''
+  
+  input_filenames = glob.glob(args.input_dir + '/' + inputFilePattern)
+  print('input_filenames:', input_filenames)
+  for filename in input_filenames:
+    print('input filename:', filename)
+    with open(filename, 'r') as f:
+      host_key = os.path.basename(filename)
+      host_component_dict[host_key] = {
+        'ExternalInputs': dict(),
+        'Internals': dict(),
+        'ExternalOutputs': dict()
+      }
+
+      json_data = json.load(f)
+      for k,v in json_data.items():
+        print('key:', k)
+        for class_name,mappings in v['data_map'].items():
+          # print('class_name:', class_name)
+          if k == externalToInternalKeyword:
+            host_component_dict[host_key]['Internals'][class_name] = dict()
+          elif k == internalToExternalKeyword:
+            host_component_dict[host_key]['ExternalOutputs'][class_name] = dict()
+
+          for connection in mappings:
+            var_name = connection['dst_var_name']
+            var_type = connection['dtype']
+
+            if k == externalToInternalKeyword:
+              host_component_dict[host_key]['Internals'][class_name][var_name] = var_type
+            elif k == internalToExternalKeyword:
+              host_component_dict[host_key]['ExternalOutputs'][class_name][var_name] = var_type
+
+            if class_name in all_class_dict.keys():
+              all_class_dict[class_name][var_name] = var_type
+            else:
+              all_class_dict[class_name] = {var_name:var_type}
+
+            source_class_name = connection['from']
+            if k == externalToInternalKeyword:
+              if source_class_name not in host_component_dict[host_key]['ExternalInputs'].keys():
+                host_component_dict[host_key]['ExternalInputs'][source_class_name] = dict()
+            elif k == internalToExternalKeyword:
+              if source_class_name not in host_component_dict[host_key]['Internals'].keys():
+                host_component_dict[host_key]['Internals'][source_class_name] = dict()
+
+            source_var_name = connection['assigne']
+            source_var_type = connection['stype']
+
+            if k == externalToInternalKeyword:
+              host_component_dict[host_key]['ExternalInputs'][source_class_name][source_var_name] = source_var_type
+            elif k == internalToExternalKeyword:
+              host_component_dict[host_key]['Internals'][source_class_name][source_var_name] = source_var_type
+
+            if source_class_name in all_class_dict.keys():
+              all_class_dict[source_class_name][source_var_name] = source_var_type
+            else:
+              all_class_dict[source_class_name] = {source_var_name: source_var_type}
+
+  print('host_component_dict:')
+  pp(host_component_dict)
+  print('all_class_dict:')
+  pp(all_class_dict)
+
+  for host_key,section_dict in host_component_dict.items():
+    for class_name in section_dict['ExternalInputs'].keys():
+      section_dict['ExternalInputs'][class_name] = all_class_dict[class_name]
+    for class_name in section_dict['ExternalOutputs'].keys():
+      section_dict['ExternalOutputs'][class_name] = all_class_dict[class_name]
+
+  print('host_component_dict:')
+  pp(host_component_dict)
+
+  ## Save all-in-one header file
+  # with open(os.path.join(args.output_base_dir, allInOneRelativeDir, allInOneFilename),'w') as f:
+  with open(os.path.join(allInOneRelativeDir, allInOneFilename),'w') as f:
+  # with open(os.path.join('./', allInOneFilename),'w') as f:
+    f.write('#pragma once\n\n')
+    f.write('#include <stdio.h>\n')
+    f.write('#include <stdlib.h>\n')
+    f.write('#include <iostream>\n')
+    f.write('#include <sstream>\n')
+    f.write('#include <string>\n\n')
+
+    for host_key,section_dict in host_component_dict.items():
+      host_name = host_key.split(os.extsep)[0].split('_')[-1]
+      f.write(f'//ExternalOutputs of {host_name}\n')
+      for class_name,class_member in section_dict['ExternalOutputs'].items():
+        #print(name, member)
+        f.write('typedef struct ' + class_name + ' {\n')
+        for var,var_type in class_member.items():
+          f.write('    ' + var_type + ' ' + var + ';\n')
+        f.write('} ' + class_name + ';\n\n')
+
+    for host_key,section_dict in host_component_dict.items():
+      host_id = [int(s) for s in list(host_key) if s.isdigit()][0]
+      host_name = host_key.split(os.extsep)[0].split('_')[-1]
+      f.write('// ============ HostComponent'+str(host_id)+' for '+host_name+' ============== //\n')
+      if 'ExternalInputs' in section_dict.keys():
+        f.write('class HostComponent'+str(host_id)+'ExternalInputT {\n')
+        f.write('public:\n')
+        f.write('    HostComponent'+str(host_id)+'ExternalInputT() = default;\n')
+        f.write('    virtual ~HostComponent'+str(host_id)+'ExternalInputT() = default;\n\n')
+        for class_name in section_dict['ExternalInputs'].keys():
+          f.write('    '+class_name+' '+class_name.lower()+';\n')
+        f.write('};\n\n')
+
+      if 'ExternalOutputs' in section_dict.keys():
+        f.write('class HostComponent'+str(host_id)+'ExternalOutputT {\n')
+        f.write('public:\n')
+        f.write('    HostComponent'+str(host_id)+'ExternalOutputT() = default;\n')
+        f.write('    virtual ~HostComponent'+str(host_id)+'ExternalOutputT() = default;\n\n')
+        for class_name in section_dict['ExternalOutputs'].keys():
+          f.write('    '+class_name+' '+class_name.lower()+';\n')
+        f.write('};\n\n')
+
+  ## Save private header files
+  for filename in input_filenames:
+    print('input filename:', filename)
+    json_data = None
+    with open(filename, 'r') as f:
+      json_data = json.load(f)
+
+      host_key = os.path.basename(filename)
+      section_dict = host_component_dict[host_key]
+
+      host_id = [int(s) for s in list(host_key) if s.isdigit()][0]
+      host_name = host_key.split(os.extsep)[0].split('_')[-1]
+      dirname = os.path.join(
+        defaultOutputBaseDir,
+        privateHeaderRelativeDir.format(host_id)
+      )
+
+      if not os.path.isdir(dirname):
+        os.makedirs(dirname)
+        
+      with open(os.path.join(dirname, privateHeaderFilename), 'w') as f:
+        f.write( '#pragma once\n\n')
+        f.write(f'#include "{host_name}_internal_data.h"\n')
+        f.write( '#include "../../external_interface/smart_converter_external_interface.h"\n')
+        f.write( '#include "smart_converter_core_base.h"\n\n')
+
+        f.write(f'class SmartConverterCore{host_id}:\n')
+        f.write(f'    public SmartConverterCoreBase<HostComponent{host_id}ExternalInputT, HostComponent{host_id}InternalDataT, HostComponent{host_id}ExternalOutputT>\n')
+        f.write( '{\n')
+        f.write( 'public:\n')
+        f.write(f'    SmartConverterCore{host_id}(std::string component_name)\n')
+        f.write( '    {\n')
+        f.write( '        component_name_ = component_name;\n')
+        f.write( '    }\n')
+        f.write(f'    virtual ~SmartConverterCore{host_id}(void) = default;\n\n')
+
+        ## mapping for externalToInternals        
+        f.write( '    void PreRun(void)\n')
+        f.write( '    {\n')
+        if externalToInternalKeyword in json_data.keys():
+          f.write(f'        external_input = dynamic_cast<HostComponent{host_id}ExternalInputT*>(this->GetExternalInputMemory(component_name_));\n')
+          f.write(f'        internal_data = dynamic_cast<HostComponent{host_id}InternalDataT*>(this->GetInternalDataMemory(component_name_));\n\n')
+
+          for class_name,members in json_data[externalToInternalKeyword]['data_map'].items():
+            for item in members:
+              ## internal <- external input
+              f.write(f"        internal_data->{class_name.lower()}.{item['dst_var_name']} = external_input->{item['from'].lower()}.{item['assigne']};\n")
+            f.write('\n')
+          
+        f.write( '    }\n\n')
+
+        ## mapping for internalToExternal
+        f.write( '    void PostRun(void)\n')
+        f.write( '    {\n')
+        if internalToExternalKeyword in json_data.keys():
+          f.write(f'        external_output = dynamic_cast<HostComponent{host_id}ExternalOutputT*>(this->GetExternalOutputMemory(component_name_));\n')
+          f.write(f'        internal_data = dynamic_cast<HostComponent{host_id}InternalDataT*>(this->GetInternalDataMemory(component_name_));\n\n')
+
+          for class_name,members in json_data[internalToExternalKeyword]['data_map'].items():
+            for item in members:
+              ## external output <- internal
+              f.write(f"        external_output->{class_name.lower()}.{item['dst_var_name']} = internal_data->{item['from'].lower()}.{item['assigne']};\n")
+            f.write('\n')
+        f.write( '    }\n\n')
+
+        f.write( 'private:\n')
+        f.write( '    std::string component_name_ {};\n\n')
+        f.write(f'    HostComponent{host_id}ExternalInputT* external_input {{}};\n')
+        f.write(f'    HostComponent{host_id}InternalDataT* internal_data {{}};\n')
+        f.write(f'    HostComponent{host_id}ExternalOutputT* external_output {{}};\n')
+        f.write( '};\n')
+
+   
+      # ======================================== Internal Data Structure ========================================
+      host_components_dirname = internalDataPrivateHeaderRelativeDir.format(host_name)
+      with open(os.path.join(host_components_dirname, internalDataPrivateHeaderFilename.format(host_name)), 'w') as f:
+        f.write( '#pragma once\n\n')
+
+        f.write( '#include <stdlib.h>\n')
+        f.write( '#include <string>\n')
+        f.write( '#include <vector>\n')
+        f.write( '#include <memory>\n')
+        f.write( '#include <map>\n')
+        f.write( '#include <unordered_map>\n')
+        f.write( '#include "../../../pfsp_core/pfsp_include/pfsp_common.h"\n\n')
+
+        f.write(f'// Internals of {host_name}\n')
+        for class_name,class_member in section_dict['Internals'].items():
+          #print(name, member)
+          f.write('typedef struct ' + class_name + ' {\n')
+          for var,var_type in class_member.items():
+            f.write('    ' + var_type + ' ' + var + ';\n')
+          f.write('} ' + class_name + ';\n\n')
+
+        if 'Internals' in section_dict.keys():
+          f.write('class HostComponent'+str(host_id)+'InternalDataT {\n')
+          f.write('public:\n')
+          f.write('    HostComponent'+str(host_id)+'InternalDataT() = default;\n')
+          f.write('    virtual ~HostComponent'+str(host_id)+'InternalDataT() = default;\n\n')
+          for class_name in section_dict['Internals'].keys():
+            f.write('    '+class_name+' '+class_name.lower()+';\n')
+          f.write('};\n\n')
+
+
+if __name__ == '__main__':
+  main(sys.argv)

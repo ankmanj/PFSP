@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -g -ldl -g  -shared -Wl,-soname,libPFSP_component3.so -o libPFSP_component3.so CMakeFiles/PFSP_component3.dir/src/component3.cpp.o 

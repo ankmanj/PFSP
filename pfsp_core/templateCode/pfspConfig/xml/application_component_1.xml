@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<PFSPMiddleware version="1.0" xmlns="http://www.dmg.org/PMML-3-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema_instance">
+    <Header xmlns="" copyright="">
+        The PFSPMiddleware Service Configuration
+        <Application name="PFSP_MW" version="2.0"/>
+    </Header>
+
+    <parameterTable>
+        <!-- For parameter table -->
+        <parameter name="HostAppLibName" value = "libHOST_app_component_1.so" />
+
+        <!-- For Error Handler [Start ~]-->
+		<parameter name="Error0" value="CalibrationFailure"/>
+		<parameter name="Error0_Use" value="eOff"/>
+		<parameter name="Error0_DebouncingCriteria" value="eTime"/>
+		<parameter name="Error0_ThresholdToTriggerFailure" value="1000"/>
+		<parameter name="Error0_ThresholdToResetFailure" value="100"/>
+		<parameter name="Error0_ReactionMode" value="eSWComponentOperationModeNormal"/>
+		<parameter name="Error0_ReactionState" value="eSWComponentStateTriggerInit"/>
+		
+		<parameter name="Error1" value="InvalidInput"/>
+		<parameter name="Error1_Use" value="eOff"/>
+		<parameter name="Error1_DebouncingCriteria" value="eTime"/>
+		<parameter name="Error1_ThresholdToTriggerFailure" value="1000"/>
+		<parameter name="Error1_ThresholdToResetFailure" value="100"/>
+		<parameter name="Error1_ReactionMode" value="eSWComponentOperationModeNormal"/>
+		<parameter name="Error1_ReactionState" value="eSWComponentStateTriggerInit"/>
+		
+		<parameter name="Error2" value="InvalidOutput"/>
+		<parameter name="Error2_Use" value="eOff"/>
+		<parameter name="Error2_DebouncingCriteria" value="eTime"/>
+		<parameter name="Error2_ThresholdToTriggerFailure" value="1000"/>
+		<parameter name="Error2_ThresholdToResetFailure" value="100"/>
+		<parameter name="Error2_ReactionMode" value="eSWComponentOperationModeNormal"/>
+		<parameter name="Error2_ReactionState" value="eSWComponentStateTriggerInit"/>
+		
+		<parameter name="Error3" value="TimeOutInput"/>
+		<parameter name="Error3_Use" value="eOff"/>
+		<parameter name="Error3_DebouncingCriteria" value="eTime"/>
+		<parameter name="Error3_ThresholdToTriggerFailure" value="1000"/>
+		<parameter name="Error3_ThresholdToResetFailure" value="100"/>
+		<parameter name="Error3_ReactionMode" value="eSWComponentOperationModeNormal"/>
+		<parameter name="Error3_ReactionState" value="eSWComponentStateTriggerInit"/>
+		
+		<parameter name="Error4" value="TimeOutOutput"/>
+		<parameter name="Error4_Use" value="eOff"/>
+		<parameter name="Error4_DebouncingCriteria" value="eTime"/>
+		<parameter name="Error4_ThresholdToTriggerFailure" value="1000"/>
+		<parameter name="Error4_ThresholdToResetFailure" value="100"/>
+		<parameter name="Error4_ReactionMode" value="eSWComponentOperationModeNormal"/>
+		<parameter name="Error4_ReactionState" value="eSWComponentStateTriggerInit"/>
+		
+		<parameter name="Error5" value="MemoryReadWriteFailure"/>
+		<parameter name="Error5_Use" value="eOn"/>
+		<parameter name="Error5_DebouncingCriteria" value="eCount"/>
+		<parameter name="Error5_ThresholdToTriggerFailure" value="5"/>
+		<parameter name="Error5_ThresholdToResetFailure" value="3"/>
+		<parameter name="Error5_ReactionMode" value="eSWComponentOperationModeNormal"/>
+		<parameter name="Error5_ReactionState" value="eSWComponentStateCurrent"/>
+		
+		<parameter name="Error6" value="NullPointer"/>
+		<parameter name="Error6_Use" value="eOn"/>
+		<parameter name="Error6_DebouncingCriteria" value="eTime"/>
+		<parameter name="Error6_ThresholdToTriggerFailure" value="1000"/>
+		<parameter name="Error6_ThresholdToResetFailure" value="1000"/>
+		<parameter name="Error6_ReactionMode" value="eSWComponentOperationModeDiagnostics"/>
+		<parameter name="Error6_ReactionState" value="eSWComponentStateStop"/>
+
+		<parameter name="Error7" value="InvalidDataValue"/>
+		<parameter name="Error7_Use" value="eOn"/>
+		<parameter name="Error7_DebouncingCriteria" value="eTime"/>
+		<parameter name="Error7_ThresholdToTriggerFailure" value="500"/>
+		<parameter name="Error7_ThresholdToResetFailure" value="1000"/>
+		<parameter name="Error7_ReactionMode" value="eSWComponentOperationModeNormal"/>
+		<parameter name="Error7_ReactionState" value="eSWComponentStateStop"/>
+		
+		<parameter name="Error8" value="InvalidDataSize"/>
+		<parameter name="Error8_Use" value="eOn"/>
+		<parameter name="Error8_DebouncingCriteria" value="eTime"/>
+		<parameter name="Error8_ThresholdToTriggerFailure" value="1000"/>
+		<parameter name="Error8_ThresholdToResetFailure" value="1000"/>
+		<parameter name="Error8_ReactionMode" value="eSWComponentOperationModeNormal"/>
+		<parameter name="Error8_ReactionState" value="eSWComponentStateStop"/>
+
+		<parameter name="Error9" value="IndexOutOfBounds"/>
+		<parameter name="Error9_Use" value="eOn"/>
+		<parameter name="Error9_DebouncingCriteria" value="eTime"/>
+		<parameter name="Error9_ThresholdToTriggerFailure" value="1000"/>
+		<parameter name="Error9_ThresholdToResetFailure" value="1000"/>
+		<parameter name="Error9_ReactionMode" value="eSWComponentOperationModeNormal"/>
+		<parameter name="Error9_ReactionState" value="eSWComponentStateStop"/>
+
+		<parameter name="Error10" value="FileReadWriteOpenFailure"/>
+		<parameter name="Error10_Use" value="eOn"/>
+		<parameter name="Error10_DebouncingCriteria" value="eTime"/>
+		<parameter name="Error10_ThresholdToTriggerFailure" value="300"/>
+		<parameter name="Error10_ThresholdToResetFailure" value="400"/>
+		<parameter name="Error10_ReactionMode" value="eSWComponentOperationModeNormal"/>
+		<parameter name="Error10_ReactionState" value="eSWComponentStateStop"/>
+		
+		<parameter name="Error11" value="Unknown"/>
+		<parameter name="Error11_Use" value="eOn"/>
+		<parameter name="Error11_DebouncingCriteria" value="eCount"/>
+		<parameter name="Error11_ThresholdToTriggerFailure" value="10"/>
+		<parameter name="Error11_ThresholdToResetFailure" value="100"/>
+		<parameter name="Error11_ReactionMode" value="eSWComponentOperationModeDiagnostics"/>
+		<parameter name="Error11_ReactionState" value="eSWComponentStateStop"/>
+        <!-- For Error Handler [~ END]-->
+
+        <!-- For Mode Manager [Start ~]-->
+        <parameter name="eSWComponentOperationModeNormal" value = "eOn" />
+        <parameter name="eSWComponentOperationModeDegradation" value = "eOn" />
+        <parameter name="eSWComponentOperationModeDiagnostics" value = "eOn" />
+        <!-- play eOnce = 0, play repeatly = eRepeat -->
+        <parameter name="PlayType" value = "eRepeat" />
+        <!-- name="ThreadFrequency" value = "100" [ms] -->
+        <parameter name="ThreadFrequency" value = "20" />
+        <!-- For Mode Manager [~ END ]-->       
+
+    </parameterTable>
+</PFSPMiddleware>

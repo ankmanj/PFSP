@@ -1,0 +1,219 @@
+{
+    "PFSPMiddleware": {
+        "version": "1.0",
+        "xmlns": "http://www.dmg.org/PMML-3-0",
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema_instance",
+        "Header": {
+            "xmlns": "",
+            "copyright": "",
+            "text": "The PFSPMiddleware System Configuration for PFSPArchitecture",
+            "Application": {
+                "name": "/PFSP_MW",
+                "version": "2.0"
+            }
+        },
+        "nodeTable": {
+            "node": [
+                {
+                    "name": "/pfsp_demo_first",
+                    "id": "1",
+                    "connect": {
+                        "name": "/pc",
+                        "path": "server//192.168.0.11:9009",
+                        "rx_buff_size": "1048576",
+                        "mode": "async",
+                        "priority": "10",
+                        "class": "CTcpConnect"
+                    }
+                },
+                {
+                    "name": "/pc",
+                    "id": "2",
+                    "connect": {
+                        "name": "/pfsp_demo_first",
+                        "path": "client//192.168.0.11:9009",
+                        "rx_buff_size": "1048576",
+                        "mode": "sync",
+                        "priority": "10",
+                        "class": "CTcpConnect"
+                    }
+                }
+            ]
+        },
+        "serviceTable": {
+            "service": [
+                {
+                    "name": "/time",
+                    "id": "1",
+                    "priority": "12",
+                    "core": "0",
+                    "mailbox_size": "4096",
+                    "class": "CTimeService",
+                    "node": "/pfsp_demo_first",
+                    "parameterFile": {
+                        "file": "time.json"
+                    }
+                },
+                {
+                    "name": "/PluginErrorHandler",
+                    "id": "2",
+                    "priority": "1",
+                    "core": "0",
+                    "mail_size": "24692",
+                    "mailbox_size": "409600",
+                    "class": "PfspPluginErrorHandler",
+                    "node": "/pfsp_demo_first",
+                    "parameterFile": {
+                        "file": "plugin_error_handler.json"
+                    }
+                },
+                {
+                    "name": "/PluginModeManager",
+                    "id": "3",
+                    "priority": "2",
+                    "core": "0",
+                    "mail_size": "24692",
+                    "mailbox_size": "409600",
+                    "class": "PfspPluginModeManager",
+                    "node": "/pfsp_demo_first",
+                    "parameterFile": {
+                        "file": "plugin_mode_manager.json"
+                    }
+                },
+                {
+                    "name": "/component1",
+                    "id": "4",
+                    "priority": "3",
+                    "class": "CService1Base",
+                    "core": "0",
+                    "mail_size": "24692",
+                    "mailbox_size": "409600",
+                    "node": "/pfsp_demo_first",
+                    "parameterFile": {
+                        "file": "config1.json"
+                    }
+                },
+                {
+                    "name": "/component2",
+                    "id": "5",
+                    "priority": "4",
+                    "class": "CService2Base",
+                    "core": "0",
+                    "mail_size": "24692",
+                    "mailbox_size": "409600",
+                    "node": "/pfsp_demo_first",
+                    "parameterFile": {
+                        "file": "config2.json"
+                    }
+                },
+                {
+                    "name": "/component3",
+                    "id": "6",
+                    "priority": "5",
+                    "class": "CService3Base",
+                    "core": "0",
+                    "mail_size": "24692",
+                    "mailbox_size": "409600",
+                    "node": "/pfsp_demo_first",
+                    "parameterFile": {
+                        "file": "config3.json"
+                    }
+                }
+            ]
+        },
+        "topicTable": {
+            "topic": [
+                {
+                    "name": "Timer",
+                    "id": "1",
+                    "publisher": "/time"
+                },
+                {
+                    "name": "ReactionReportTopic",
+                    "id": "2",
+                    "publisher": "/PluginErrorHandler"
+                },
+                {
+                    "name": "ComponentsReactionTopic",
+                    "id": "3",
+                    "publisher": "/PluginModeManager"
+                },
+                {
+                    "name": "HostComponent0OutputTopic",
+                    "id": "4",
+                    "publisher": "/component1"
+                },
+                {
+                    "name": "HostComponent0AllErrorsInfoTopic",
+                    "id": "5",
+                    "publisher": "/component1"
+                },
+                {
+                    "name": "HostComponent0AllModeInfoTopic",
+                    "id": "6",
+                    "publisher": "/component1"
+                },
+                {
+                    "name": "HostComponent0ErrorReportTopic",
+                    "id": "7",
+                    "publisher": "/component1"
+                },
+                {
+                    "name": "HostComponent0ModeStateReportTopic",
+                    "id": "8",
+                    "publisher": "/component1"
+                },
+                {
+                    "name": "HostComponent1OutputTopic",
+                    "id": "9",
+                    "publisher": "/component2"
+                },
+                {
+                    "name": "HostComponent1AllErrorsInfoTopic",
+                    "id": "10",
+                    "publisher": "/component2"
+                },
+                {
+                    "name": "HostComponent1AllModeInfoTopic",
+                    "id": "11",
+                    "publisher": "/component2"
+                },
+                {
+                    "name": "HostComponent1ErrorReportTopic",
+                    "id": "12",
+                    "publisher": "/component2"
+                },
+                {
+                    "name": "HostComponent1ModeStateReportTopic",
+                    "id": "13",
+                    "publisher": "/component2"
+                },
+                {
+                    "name": "HostComponent2OutputTopic",
+                    "id": "14",
+                    "publisher": "/component3"
+                },
+                {
+                    "name": "HostComponent2AllErrorsInfoTopic",
+                    "id": "15",
+                    "publisher": "/component3"
+                },
+                {
+                    "name": "HostComponent2AllModeInfoTopic",
+                    "id": "16",
+                    "publisher": "/component3"
+                },
+                {
+                    "name": "HostComponent2ErrorReportTopic",
+                    "id": "17",
+                    "publisher": "/component3"
+                },
+                {
+                    "name": "HostComponent2ModeStateReportTopic",
+                    "id": "18",
+                    "publisher": "/component3"
+                }
+            ]
+        }
+    }
+}

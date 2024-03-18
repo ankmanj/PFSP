@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<PFSPMiddleware version="1.0" xmlns="http://www.dmg.org/PMML-3-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema_instance">
+  <Header xmlns="" copyright="">
+    The PFSPMiddleware for HIT.
+    <Application name="PFSP_MW" version="0.9 beta"/>
+  </Header>
+
+  <parameterTable>
+  	<!-- per 100ms units: 10 is 10*100ms. -->
+    <parameter name="frequence" value="1" /> 
+        
+    <parameter name="timerWorkerPriority" value="0" />
+    
+  </parameterTable>
+
+</PFSPMiddleware>

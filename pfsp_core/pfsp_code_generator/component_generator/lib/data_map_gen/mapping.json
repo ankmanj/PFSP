@@ -1,0 +1,41 @@
+{ 
+  "SamrtConverterToAlgo":
+  {
+    "function":"GetConvertedInternalData",
+    "class_initial":"PFSPCorePluginSmartConverter",
+    "data_map":
+    {
+      "InternalObject":[
+        {"dst_var_name":"time", "dtype":"int64", "from":"OFObject", "assigne":"stamp", "stype":"int64"},
+        {"dst_var_name":"type", "dtype":"int64", "from":"OFObject", "assigne":"obj_type", "stype":"int64"},
+        {"dst_var_name":"fused_obj_loc", "dtype":"Location2D", "from":"OFObject", "assigne":"vehicle_loc", "stype":"Location"}
+      ],
+      "RoadInfo":[
+        {"dst_var_name":"time", "dtype":"int64", "from":"FusedRoad", "assigne":"stamp", "stype":"int64"},
+        {"dst_var_name":"lane_num", "dtype":"int64", "from":"FusedRoad", "assigne":"detected_lanes_num", "stype":"int64"},
+        {"dst_var_name":"lane_type", "dtype":"int64", "from":"FusedRoad", "assigne":"lane_color", "stype":"int64"}
+      ]
+    }
+  },
+
+  "SamrtConverterToExt":
+  {
+    "function":"GetConvertedExternalData",
+    "class_initial":"PFSPCorePluginSmartConverter",
+    "data_map":
+  {
+    "PriorityObject":[
+      {"dst_var_name":"time", "dtype":"int64", "from":"InternalObject", "assigne":"stamp", "stype":"int64"},
+      {"dst_var_name":"type", "dtype":"int64", "from":"InternalObject", "assigne":"obj_type", "stype":"int64"},
+      {"dst_var_name":"priority", "dtype":"int64", "from":"InternalObject", "assigne":"risk_level", "stype":"int64"},
+      {"dst_var_name":"name", "dtype":"string", "from":"InternalSomething", "assigne":"some", "stype":"string"}
+    ],
+    "DrivablePath":[
+      {"dst_var_name":"time", "dtype":"int64", "from":"RoadInfo", "assigne":"stamp", "stype":"int64"},
+      {"dst_var_name":"lane_num", "dtype":"int64", "from":"RoadInfo", "assigne":"detected_lanes_num", "stype":"int64"},
+      {"dst_var_name":"driving_wimdow", "dtype":"int64", "from":"RoadInfo", "assigne":"safe_time", "stype":"int64"}
+    ]
+  }
+}
+
+}

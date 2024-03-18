@@ -1,0 +1,123 @@
+{
+    "SmartConverterToInternalBase": { 
+        "smart_converter_component_id": 1,
+        "function": "GetConvertedInternalData",
+        "includes": [
+            "smart_converter_to_internal_base.hpp"
+        ],
+        "class_initial": "SmartConverterCore0",
+        "data_map": {
+            "InternalObject": [
+                {
+                    "dst_var_name": "time",
+                    "dtype": "int64",
+                    "from": "OFObject",
+                    "assigne": "stamp",
+                    "stype": "int64",
+                    "scomponent_id": "2"
+                },
+                {
+                    "dst_var_name": "type",
+                    "dtype": "int64",
+                    "from": "OFObject",
+                    "assigne": "obj_type",
+                    "stype": "int64",
+                    "scomponent_id": "2"
+                },
+                {
+                    "dst_var_name": "fused_obj_loc",
+                    "dtype": "Location2D",
+                    "from": "OFObject",
+                    "assigne": "vehicle_loc",
+                    "stype": "Location",
+                    "scomponent_id": "2"
+                }
+            ],
+            "RoadInfo": [
+                {
+                    "dst_var_name": "time",
+                    "dtype": "int64",
+                    "from": "FusedRoad",
+                    "assigne": "stamp",
+                    "stype": "int64"
+                },
+                {
+                    "dst_var_name": "lane_num",
+                    "dtype": "int64",
+                    "from": "FusedRoad",
+                    "assigne": "detected_lane_num",
+                    "stype": "int64"
+                },
+                {
+                    "dst_var_name": "lane_type",
+                    "dtype": "int64",
+                    "from": "FusedRoad",
+                    "assigne": "lane_color",
+                    "stype": "int64"
+                }
+            ]
+        }
+    },
+    "SmartConverterToExternalBase": {
+        "function": "GetConvertedExternalData",
+        "class_initial": "SmartConverterCore0",
+        "includes": [
+            "smart_converter_to_external_base.h"
+        ],
+        "data_map": {
+            "PriorityObject": [
+                {
+                    "dst_var_name": "time",
+                    "dtype": "int64",
+                    "from": "InternalObject",
+                    "assigne": "time",
+                    "stype": "int64"
+                },
+                {
+                    "dst_var_name": "type",
+                    "dtype": "int64",
+                    "from": "InternalObject",
+                    "assigne": "type",
+                    "stype": "int64"
+                },
+                {
+                    "dst_var_name": "priority",
+                    "dtype": "int64",
+                    "from": "InternalObject",
+                    "assigne": "risk_level",
+                    "stype": "int64"
+                },
+                {
+                    "dst_var_name": "name",
+                    "dtype": "string",
+                    "from": "InternalSomething",
+                    "assigne": "some",
+                    "stype": "string"
+                }
+            ],
+            "DrivablePath": [
+                {
+                    "dst_var_name": "time",
+                    "dtype": "int64",
+                    "from": "RoadInfo",
+                    "assigne": "time",
+                    "stype": "int64"
+                },
+                {
+                    "dst_var_name": "lane_num",
+                    "dtype": "int64",
+                    "from": "RoadInfo",
+                    "assigne": "lane_num",
+                    "stype": "int64"
+                },
+                {
+                    "dst_var_name": "driving_window",
+                    "dtype": "int64",
+                    "from": "RoadInfo",
+                    "assigne": "safe_time",
+                    "stype": "int64"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,71 @@
+/**
+	@file	Task_Template.h
+	@date	2009-05-14
+	@author Son, Hyuk Soo(neoson@lge.com)
+	@brief
+		Operating System Abstract Layer Library
+		Task Template Example
+	@remark	 	
+	@warning
+	 	LGE Information And Technology Laboratory
+        Copyright(C) 2009 LG Electronics Co., LTD., Seoul, Korea
+        All Rights are Reserved.
+*/
+
+#ifndef __TASK_TEMPLATE_H__
+#define __TASK_TEMPLATE_H__
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
+/*
+ * Message Types
+ */
+typedef enum { false=0, true} bool;
+
+typedef struct {
+	int type;
+	int length;	
+} Msg_T;
+
+typedef struct {
+	int event;
+	int data;	
+	/*
+	 * Task Template Msg Type
+	 */
+} Task_Template_Msg_Body;
+
+typedef struct {
+	Msg_T				   header;
+	Task_Template_Msg_Body body;
+} Task_Template_Msg_T;
+
+typedef enum {
+	TASK_TEMPLATE_START_TYPE=0, 
+	TASK_TEMPLATE_A_TYPE, 
+	TASK_TEMPLATE_B_TYPE, 
+	TASK_TEMPLATE_END_TYPE
+} TASK_TEMPLAT_MSG_TYPE_ID;
+
+/*
+ * Public Member Functions
+ */
+int  Task_Template_Send(Task_Template_Msg_T* pcBuf);
+int  Task_Template_Get_Data(void);
+void Task_Template_Set_Data(int iData);
+int  Task_Template_Get_State(void);
+
+//int Task_Template_Send2(const char* pcMsgQName, char* pcBuf, unsigned int iSize);
+
+void* Task_Template_Handler(void* args);
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif //__TASK_TEMPLATE_H__
+

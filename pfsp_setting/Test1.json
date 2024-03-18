@@ -1,0 +1,722 @@
+{
+    "id": 140615273772464,
+    "scene_width": 64000,
+    "scene_height": 64000,
+    "nodes": [
+        {
+            "id": 140615273904832,
+            "title": "HostComponent",
+            "pos_x": -627.0,
+            "pos_y": -186.0,
+            "inputs": [],
+            "outputs": [],
+            "content": {
+                "name": "test_1",
+                "id": "1",
+                "priority": "10",
+                "class": "TestClass1",
+                "config file": "config1",
+                "hidden": {
+                    "parameters": [
+                        {
+                            "name": "HostComponentLibName",
+                            "value": "libPFSP_ServiceName1.so"
+                        }
+                    ],
+                    "mode_manager": {
+                        "PlayType": "Repeat",
+                        "ThreadFrequency": 20,
+                        "eSWComponentOperationModeDegradation": false,
+                        "eSWComponentOperationModeDiagnostics": false,
+                        "eSWComponentOperationModeNormal": true
+                    },
+                    "smart_converter": {
+                        "id": 140615666128464,
+                        "scene_width": 64000,
+                        "scene_height": 64000,
+                        "nodes": [
+                            {
+                                "id": 140615666129648,
+                                "title": "Data Structure",
+                                "pos_x": -120.0,
+                                "pos_y": -125.0,
+                                "inputs": [
+                                    {
+                                        "id": 140615666129712,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 140615666129392,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "CService1InteralData",
+                                    "object_member_0": "type_varname:int8_t"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 140615666129552,
+                                "title": "SmartConverter - Internal To External Output",
+                                "pos_x": 264.0,
+                                "pos_y": -127.0,
+                                "inputs": [
+                                    {
+                                        "id": 140615666129808,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 140615666129840,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "class_initial": "CService1",
+                                    "function": "getConvertedExternalData",
+                                    "pipelines": 1
+                                },
+                                "op_code": 2
+                            },
+                            {
+                                "id": 140615666129872,
+                                "title": "Data Structure",
+                                "pos_x": 865.0,
+                                "pos_y": -124.0,
+                                "inputs": [
+                                    {
+                                        "id": 140615666129968,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 140615666130000,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "ExternalOutputFromCService1",
+                                    "object_member_0": "type_varname:int8_t"
+                                },
+                                "op_code": 0
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "id": 140615666130032,
+                                "edge_type": 2,
+                                "start": 140615666129392,
+                                "end": 140615666129808
+                            },
+                            {
+                                "id": 140615666130064,
+                                "edge_type": 2,
+                                "start": 140615666129840,
+                                "end": 140615666129968
+                            }
+                        ]
+                    },
+                    "error_handler": {
+                        "CalibrationFailure": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "FileReadWriteOpenFailure": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "IndexOutOfBounds": {
+                            "DebouncingCriteria": "eCount",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateRun",
+                            "ThresholdToResetFailure": 5,
+                            "ThresholdToTriggerFailure": 5,
+                            "Use": true
+                        },
+                        "InvalidDataSize": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "InvalidDataValue": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "InvalidInput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "InvalidOutput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "MemoryReadWriteFailure": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "NullPointer": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "TimeOutInput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "TimeOutOutput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "Unknown": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        }
+                    }
+                }
+            },
+            "op_code": 1
+        },
+        {
+            "id": 140615084264128,
+            "title": "HostComponent",
+            "pos_x": -193.0,
+            "pos_y": -191.0,
+            "inputs": [],
+            "outputs": [],
+            "content": {
+                "name": "test_2",
+                "id": "2",
+                "priority": "10",
+                "class": "TestClass2",
+                "config file": "config2",
+                "hidden": {
+                    "parameters": [
+                        {
+                            "name": "HostComponentLibName",
+                            "value": "libPFSP_ServiceName2.so"
+                        }
+                    ],
+                    "mode_manager": {
+                        "PlayType": "Repeat",
+                        "ThreadFrequency": 40,
+                        "eSWComponentOperationModeDegradation": false,
+                        "eSWComponentOperationModeDiagnostics": false,
+                        "eSWComponentOperationModeNormal": true
+                    },
+                    "smart_converter": {
+                        "id": 140615666128464,
+                        "scene_width": 64000,
+                        "scene_height": 64000,
+                        "nodes": [
+                            {
+                                "id": 140615666129648,
+                                "title": "Data Structure",
+                                "pos_x": -120.0,
+                                "pos_y": -125.0,
+                                "inputs": [
+                                    {
+                                        "id": 140615666129712,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 140615666129392,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "CService2InteralData",
+                                    "object_member_0": "type_varname:int8_t"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 140615666129552,
+                                "title": "SmartConverter - Internal To External Output",
+                                "pos_x": 264.0,
+                                "pos_y": -127.0,
+                                "inputs": [
+                                    {
+                                        "id": 140615666129808,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 140615666129840,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "class_initial": "CService2",
+                                    "function": "getConvertedExternalData",
+                                    "pipelines": 1
+                                },
+                                "op_code": 2
+                            },
+                            {
+                                "id": 140615666129872,
+                                "title": "Data Structure",
+                                "pos_x": 865.0,
+                                "pos_y": -124.0,
+                                "inputs": [
+                                    {
+                                        "id": 140615666129968,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 140615666130000,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "ExternalOutputFromCService2",
+                                    "object_member_0": "type_varname:int8_t"
+                                },
+                                "op_code": 0
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "id": 140615666130032,
+                                "edge_type": 2,
+                                "start": 140615666129392,
+                                "end": 140615666129808
+                            },
+                            {
+                                "id": 140615666130064,
+                                "edge_type": 2,
+                                "start": 140615666129840,
+                                "end": 140615666129968
+                            }
+                        ]
+                    },
+                    "error_handler": {
+                        "CalibrationFailure": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "FileReadWriteOpenFailure": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "IndexOutOfBounds": {
+                            "DebouncingCriteria": "eCount",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateRun",
+                            "ThresholdToResetFailure": 5,
+                            "ThresholdToTriggerFailure": 5,
+                            "Use": true
+                        },
+                        "InvalidDataSize": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "InvalidDataValue": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "InvalidInput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "InvalidOutput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "MemoryReadWriteFailure": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "NullPointer": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "TimeOutInput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "TimeOutOutput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "Unknown": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        }
+                    }
+                }
+            },
+            "op_code": 1
+        },
+        {
+            "id": 140615084262880,
+            "title": "HostComponent",
+            "pos_x": 260.0,
+            "pos_y": -193.0,
+            "inputs": [],
+            "outputs": [],
+            "content": {
+                "name": "test_3",
+                "id": "3",
+                "priority": "10",
+                "class": "TestClass3",
+                "config file": "config3",
+                "hidden": {
+                    "parameters": [
+                        {
+                            "name": "HostComponentLibName",
+                            "value": "libPFSP_ServiceName3.so"
+                        }
+                    ],
+                    "mode_manager": {
+                        "PlayType": "Repeat",
+                        "ThreadFrequency": 30,
+                        "eSWComponentOperationModeDegradation": false,
+                        "eSWComponentOperationModeDiagnostics": false,
+                        "eSWComponentOperationModeNormal": true
+                    },
+                    "smart_converter": {
+                        "id": 140615666128464,
+                        "scene_width": 64000,
+                        "scene_height": 64000,
+                        "nodes": [
+                            {
+                                "id": 140615666129648,
+                                "title": "Data Structure",
+                                "pos_x": -120.0,
+                                "pos_y": -125.0,
+                                "inputs": [
+                                    {
+                                        "id": 140615666129712,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 140615666129392,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "CService3InteralData",
+                                    "object_member_0": "type_varname:int8_t"
+                                },
+                                "op_code": 0
+                            },
+                            {
+                                "id": 140615666129552,
+                                "title": "SmartConverter - Internal To External Output",
+                                "pos_x": 264.0,
+                                "pos_y": -127.0,
+                                "inputs": [
+                                    {
+                                        "id": 140615666129808,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 140615666129840,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "class_initial": "CService3",
+                                    "function": "getConvertedExternalData",
+                                    "pipelines": 1
+                                },
+                                "op_code": 2
+                            },
+                            {
+                                "id": 140615666129872,
+                                "title": "Data Structure",
+                                "pos_x": 865.0,
+                                "pos_y": -124.0,
+                                "inputs": [
+                                    {
+                                        "id": 140615666129968,
+                                        "index": 0,
+                                        "multi_edges": false,
+                                        "position": 2,
+                                        "socket_type": 1
+                                    }
+                                ],
+                                "outputs": [
+                                    {
+                                        "id": 140615666130000,
+                                        "index": 0,
+                                        "multi_edges": true,
+                                        "position": 5,
+                                        "socket_type": 4
+                                    }
+                                ],
+                                "content": {
+                                    "object_class": "ExternalOutputFromCService3",
+                                    "object_member_0": "type_varname:int8_t"
+                                },
+                                "op_code": 0
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "id": 140615666130032,
+                                "edge_type": 2,
+                                "start": 140615666129392,
+                                "end": 140615666129808
+                            },
+                            {
+                                "id": 140615666130064,
+                                "edge_type": 2,
+                                "start": 140615666129840,
+                                "end": 140615666129968
+                            }
+                        ]
+                    },
+                    "error_handler": {
+                        "CalibrationFailure": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "FileReadWriteOpenFailure": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "IndexOutOfBounds": {
+                            "DebouncingCriteria": "eCount",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateRun",
+                            "ThresholdToResetFailure": 5,
+                            "ThresholdToTriggerFailure": 5,
+                            "Use": true
+                        },
+                        "InvalidDataSize": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "InvalidDataValue": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "InvalidInput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "InvalidOutput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "MemoryReadWriteFailure": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "NullPointer": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "TimeOutInput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "TimeOutOutput": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        },
+                        "Unknown": {
+                            "DebouncingCriteria": "eTime",
+                            "ReactionMode": "eSWComponentOperationModeNormal",
+                            "ReactionState": "eSWComponentStateTriggerInit",
+                            "ThresholdToResetFailure": 100,
+                            "ThresholdToTriggerFailure": 1000,
+                            "Use": false
+                        }
+                    }
+                }
+            },
+            "op_code": 1
+        }
+    ],
+    "edges": []
+}

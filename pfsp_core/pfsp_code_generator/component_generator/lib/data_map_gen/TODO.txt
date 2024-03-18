@@ -1,0 +1,21 @@
+1. Class generator for smartcovert.
+-------------------
+inter a b c
+exter d g f
+------------------
+
+
+GetConvertedExternalData()
+{
+    convertTrajectory(a,b)
+    convertLaneAssignment()
+}
+
+
+GetConvertedInternalData(d, g)
+{
+    convertTrajectory()
+    convertLaneAssignment()
+}
+
+2. UI part for mapping

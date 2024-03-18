@@ -1,0 +1,14 @@
+jedi==0.18.1
+parso==0.8.2
+pgi==0.0.11.2
+PyQt5==5.15.6
+PyQt5-Qt==5.15.2
+PyQt5-Qt5==5.15.2
+PyQt5-sip==12.9.0
+PyQt5-stubs==5.15.2.0
+QtPy==1.11.2
+ruamel.yaml==0.17.17
+ruamel.yaml.clib==0.2.6
+vext==0.7.6
+vext.gi==0.7.4
+xmltodict==0.12.0

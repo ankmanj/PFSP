@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<PFSPMiddleware version="1.0" xmlns="http://www.dmg.org/PMML-3-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema_instance">
+    <Header xmlns="" copyright="">
+        The PFSPMiddleware Service Configuration
+        <Application name="/PFSP_MW" version="2.0"/>
+    </Header>
+
+    <parameterTable>
+        <!-- play once = 0, play repeatly = 1 -->
+        <parameter name="PlayType" value = "eRepeat" />
+        <!-- name="ThreadFrequency" value = "100" [ms] -->
+        <parameter name="ThreadFrequency" value = "5" /> 
+        <!-- For Mode Manager [~ END ]-->
+    </parameterTable>
+
+</PFSPMiddleware>

@@ -1,0 +1,182 @@
+{
+    "PFSPMiddleware": {
+        "version": "1.0",
+        "xmlns": "http://www.dmg.org/PMML-3-0",
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema_instance",
+        "Header": {
+            "xmlns": "",
+            "copyright": "",
+            "Application": {
+                "name": "/PFSP_MW",
+                "version": "2.0"
+            },
+            "text": "The PFSPMiddleware System Configuration for PFSPArchitecture"
+        },
+        "nodeTable": {
+            "node": [
+                {
+                    "name": "/pfsp_demo_first",
+                    "id": "1",
+                    "connect": {
+                        "name": "/pc",
+                        "path": "server//192.168.0.11:9009",
+                        "rx_buff_size": "1048576",
+                        "mode": "async",
+                        "priority": "10",
+                        "class": "CTcpConnect"
+                    }
+                },
+                {
+                    "name": "/pc",
+                    "id": "2",
+                    "connect": {
+                        "name": "/pfsp_demo_first",
+                        "path": "client//192.168.0.11:9009",
+                        "rx_buff_size": "1048576",
+                        "mode": "sync",
+                        "priority": "10",
+                        "class": "CTcpConnect"
+                    }
+                }
+            ]
+        },
+        "serviceTable": {
+            "service": [
+                {
+                    "name": "/time",
+                    "id": "1",
+                    "priority": "12",
+                    "core": "0",
+                    "mailbox_size": "4096",
+                    "class": "CTimeService",
+                    "node": "/pfsp_demo_first",
+                    "parameterFile": {
+                        "file": "time.json"
+                    }
+                },
+                {
+                    "name": "/PluginErrorHandler",
+                    "id": "2",
+                    "priority": "5",
+                    "core": "0",
+                    "mail_size": "24692",
+                    "mailbox_size": "409600",
+                    "class": "AmspPluginErrorHandler",
+                    "node": "/pfsp_demo_first",
+                    "parameterFile": {
+                        "file": "plugin_error_handler.json"
+                    }
+                },
+                {
+                    "name": "/PluginModeManager",
+                    "id": "3",
+                    "priority": "6",
+                    "core": "0",
+                    "mail_size": "24692",
+                    "mailbox_size": "409600",
+                    "class": "AmspPluginModeManager",
+                    "node": "/pfsp_demo_first",
+                    "parameterFile": {
+                        "file": "plugin_mode_manager.json"
+                    }
+                },
+                {
+                    "name": "/TestApp1",
+                    "id": "4",
+                    "priority": "1",
+                    "class": "TestApp1Service",
+                    "core": "0",
+                    "mail_size": "24692",
+                    "mailbox_size": "409600",
+                    "node": "/pfsp_demo_first",
+                    "parameterFile": {
+                        "file": "TestAppConfig1.json"
+                    }
+                },
+                {
+                    "name": "/TestApp2",
+                    "id": "5",
+                    "priority": "10",
+                    "class": "TestApp2Service",
+                    "core": "0",
+                    "mail_size": "24692",
+                    "mailbox_size": "409600",
+                    "node": "/pfsp_demo_first",
+                    "parameterFile": {
+                        "file": "TestAppConfig2.json"
+                    }
+                }
+            ]
+        },
+        "topicTable": {
+            "topic": [
+                {
+                    "name": "Timer",
+                    "id": "1",
+                    "publisher": "/time"
+                },
+                {
+                    "name": "ReactionReportTopic",
+                    "id": "2",
+                    "publisher": "/PluginErrorHandler"
+                },
+                {
+                    "name": "ComponentsReactionTopic",
+                    "id": "3",
+                    "publisher": "/PluginModeManager"
+                },
+                {
+                    "name": "HostApp0OutputTopic",
+                    "id": "4",
+                    "publisher": "/TestApp1"
+                },
+                {
+                    "name": "HostApp0AllErrorsInfoTopic",
+                    "id": "5",
+                    "publisher": "/TestApp1"
+                },
+                {
+                    "name": "HostApp0AllModeInfoTopic",
+                    "id": "6",
+                    "publisher": "/TestApp1"
+                },
+                {
+                    "name": "HostApp0ErrorReportTopic",
+                    "id": "7",
+                    "publisher": "/TestApp1"
+                },
+                {
+                    "name": "HostApp0ModeStateReportTopic",
+                    "id": "8",
+                    "publisher": "/TestApp1"
+                },
+                {
+                    "name": "HostApp1OutputTopic",
+                    "id": "9",
+                    "publisher": "/TestApp2"
+                },
+                {
+                    "name": "HostApp1AllErrorsInfoTopic",
+                    "id": "10",
+                    "publisher": "/TestApp2"
+                },
+                {
+                    "name": "HostApp1AllModeInfoTopic",
+                    "id": "11",
+                    "publisher": "/TestApp2"
+                },
+                {
+                    "name": "HostApp1ErrorReportTopic",
+                    "id": "12",
+                    "publisher": "/TestApp2"
+                },
+                {
+                    "name": "HostApp1ModeStateReportTopic",
+                    "id": "13",
+                    "publisher": "/TestApp2"
+                }
+            ]
+        },
+        "boardTable": null
+    }
+}
