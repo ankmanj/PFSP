@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libPFSP_core_mode_manager.so -o libPFSP_core_mode_manager.so CMakeFiles/PFSP_core_mode_manager.dir/src/pfsp_core_mode_manager.cpp.o 

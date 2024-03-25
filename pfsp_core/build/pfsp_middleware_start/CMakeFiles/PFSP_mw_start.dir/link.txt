@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC  -g -ldl -pthread -g  -shared -Wl,-soname,libPFSP_mw_start.so -o libPFSP_mw_start.so CMakeFiles/PFSP_mw_start.dir/src/pfsp_mw_start.cpp.o  -Wl,-rpath,/home/junghun/Source/PFSP_FinalVersion/Backup_PFSP/PFSP/pfsp_core/pfsp_lib/libs: -ldl ../../pfsp_lib/libs/libPFSP_MW.so -lrt 

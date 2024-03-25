@@ -1,6 +1,6 @@
 #ifndef PFSP_HOSTAPP_MEMMANAGER_H_
 #define PFSP_HOSTAPP_MEMMANAGER_H_
-
+#include <cstdint>
 #include "../../pfsp_include/pfsp_enum.h"
 
 template<typename TInternalData>

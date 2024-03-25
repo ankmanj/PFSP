@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libPFSP_core_error_handler.so -o libPFSP_core_error_handler.so CMakeFiles/PFSP_core_error_handler.dir/src/pfsp_core_error_handler.cpp.o 
